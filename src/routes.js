@@ -13,11 +13,20 @@ const Item2 = Loadable({
   loader: () => import('./routes/item2/index.js'),
   loading: Loading,
 });
+
+const Tutorial = Loadable({
+  loader: () => import('./routes/tutorial/index.js'),
+  loading: Loading,
+});
+
+
+
 const Routes = () => (
    <Router>
       <Switch>
          <Route exact path="/" component={Item1}/>
          <Route path="/Item2" component={Item2} />
+         <Route path="/Tutorial" component={Tutorial} />
       </Switch>
    </Router>
 );
