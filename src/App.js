@@ -22,6 +22,8 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <a href="/">Item 1</a>
+          <a href="/Item2">Item 2</a>
           <Router>
             <Switch>
               <Route exact path="/" component={Item1}/>
