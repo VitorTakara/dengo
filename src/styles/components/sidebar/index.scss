@@ -1,0 +1,32 @@
+.sidebar {
+   &-container{
+      max-width: 500px;
+      padding: 40% 40px 40px 40px;
+   }
+    &-btn {
+        &-close {
+         font-size: 30px;
+         position: absolute;
+         top: 15px;
+         right: 25px;
+         }
+    }
+    &-info{
+      text-align: left;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+    
+    &-price{
+      font-size: 45px;     
+   }
+}
+
+
+@media screen and (max-width: 500px){
+   .sidebar {
+      &-container{
+         max-width: 320px;
+      }
+   }
+}

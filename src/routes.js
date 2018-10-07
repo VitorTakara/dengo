@@ -9,8 +9,8 @@ const Item1 = Loadable({
   loading: Loading,
 });
 
-const Item2 = Loadable({
-  loader: () => import('./routes/item2/index.js'),
+const sidebar = Loadable({
+  loader: () => import('./routes/sidebar/index.js'),
   loading: Loading,
 });
 
@@ -25,7 +25,7 @@ const Routes = () => (
    <Router>
       <Switch>
          <Route exact path="/" component={Item1}/>
-         <Route path="/Item2" component={Item2} />
+         <Route path="/sidebar" component={sidebar} />
          <Route path="/Tutorial" component={Tutorial} />
       </Switch>
    </Router>

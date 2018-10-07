@@ -1,0 +1,17 @@
+.button{
+      &-primary{
+      background-color: $primary-color;
+      border-color: $primary-color;
+      border-radius: 0;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      color: white;
+      transition: background-color .2s;
+      cursor: pointer;
+
+      &:hover{
+         background-color: #38383800;
+         color: $primary-color;
+      }
+   }
+}
