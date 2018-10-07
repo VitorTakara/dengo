@@ -7,9 +7,9 @@ import Sidebar from "react-sidebar";
 class LeftSideModal extends React.Component {
    constructor(props) {
       super(props);
-      console.log(props);
+      
       this.state = {
-        sidebarOpen: false,
+        sidebarOpen: true,
         produto: {
           Nome: props.produto.Nome,
           Preco: 4.8

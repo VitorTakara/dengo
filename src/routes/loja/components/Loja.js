@@ -12,7 +12,7 @@ class Loja extends React.Component {
 
    setProduto = ( p ) => {
       ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
-      ReactDOM.render(<LeftSideModal produto={p} sidebarOpen={this.state.sidebarOpen}/>,document.getElementById("ProdutoSideBar"))
+      ReactDOM.render(<LeftSideModal produto={p}/>,document.getElementById("ProdutoSideBar"))
       // Aqui a gente chama o SideBar e coloca as infos do produto
    }
 
