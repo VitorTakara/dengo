@@ -75,10 +75,26 @@ html, body, #root, .App{
 }
 
 .floating-buttons{
-  width: 100%;
+  width: 100vw;
   position: fixed;
-  bottom: 0;
   left: 0;
+  &.top{
+    .buttons-right{
+      top: 0px;
+    } 
+    .buttons-left{
+      top: 0px;
+    } 
+  }
+  &.bottom{
+    .buttons-right{
+      bottom: 0px;
+    } 
+    .buttons-left{
+      bottom: 0px;
+    } 
+  }
+
   .buttons-left{
     a{
       color: #ffffff;
@@ -87,7 +103,6 @@ html, body, #root, .App{
     }
     position: absolute;
     margin: 15px;
-    bottom: 0px;
     left: 0px;
     font-size: 2em;
   }
@@ -99,7 +114,6 @@ html, body, #root, .App{
     }
     position: absolute;
     margin: 15px;
-    bottom: 0px;
     right: 0px;
     font-size: 2em;
   }
