@@ -2,7 +2,6 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
-import LeftSideModal from './../../sidebar/components/sidebar.js' 
 
 class Buttons extends React.Component {
    constructor(props) {

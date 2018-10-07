@@ -1,5 +1,4 @@
 import React from 'react';
-import {ProdutoSidebar} from './../../sidebar/index.js' 
 import Buttons from './Buttons.js'
 import ReactDOM from 'react-dom'
 import LeftSideModal from './../../sidebar/components/sidebar.js' 
@@ -15,8 +14,12 @@ class Loja extends React.Component {
 
   setProduto = ( p ) => {
     console.log( p )
-    ReactDOM.render(<LeftSideModal produto={this.p} />,document.getElementById("ProdutoSideBar"))
+    ReactDOM.render(<LeftSideModal produto={this.p} openSideBar={this.openSideBar} />,document.getElementById("ProdutoSideBar"))
     // Aqui a gente chama o SideBar e coloca as infos do produto
+  }
+
+  openSideBar = (  ) => {
+    alert( 'works' )
   }
 
   render() {

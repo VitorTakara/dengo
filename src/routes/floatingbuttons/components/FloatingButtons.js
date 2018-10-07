@@ -26,7 +26,7 @@ class Page extends React.Component {
       else{
          ReactDOM.render(<BtnVolumeDown />, document.getElementById("btnMute"));
       }
-      this.state.Volume = !this.state.Volume;
+      this.setState({Volume : !this.state.Volume});
    };
  
 
