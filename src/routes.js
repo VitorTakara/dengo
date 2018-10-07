@@ -4,8 +4,8 @@ import Loadable from 'react-loadable';
 
 const Loading = () => <div>Loading...</div>;
 
-const Item1 = Loadable({
-  loader: () => import('./routes/item1/index.js'),
+const Home = Loadable({
+  loader: () => import('./routes/home/index.js'),
   loading: Loading,
 });
 
@@ -19,14 +19,20 @@ const Tutorial = Loadable({
   loading: Loading,
 });
 
+const Loja = Loadable({
+  loader: () => import('./routes/loja/index.js'),
+  loading: Loading,
+});
+
 
 
 const Routes = () => (
    <Router>
       <Switch>
-         <Route exact path="/" component={Item1}/>
+         <Route exact path="/" component={Home}/>
          <Route path="/sidebar" component={sidebar} />
          <Route path="/Tutorial" component={Tutorial} />
+         <Route path="/Loja" component={Loja} />
       </Switch>
    </Router>
 );
