@@ -1,0 +1,57 @@
+.carrinho {
+    &-container {
+        max-width: 500px;
+        padding: 40% 40px 40px;
+        text-align: left;
+    }
+    &-btn {
+        &-close {
+            font-size: 30px;
+            position: absolute;
+            top: 15px;
+            left: 25px;
+        }
+    }
+    &-card {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        margin-bottom: 50px;
+
+        &-info {
+            padding-left: 20px;
+            h5,
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        &-img img {
+            width: 100px;
+        }
+    }
+    &-checkout {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        p {
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
+}
+@media screen and (max-width: 500px) {
+    .carrinho {
+        &-container {
+            max-width: 320px;
+        }
+        &-checkout {
+            align-items: center;
+            flex-flow: column;
+            p{
+               padding-top: 10px;
+            }
+        }
+    }
+
+}
