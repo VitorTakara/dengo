@@ -39,17 +39,14 @@ class Buttons extends React.Component {
    }
   
    handleLoad() {
-      var divs = '';
-
       ReactDOM.render(
          this.produtos.map(item => {
             return (
-               <a href="#" onClick={LeftSideModal.onSetSidebarOpen(true)} id={item.Produto.Id} style={item.xy}>
+               <a href="#" onClick={() => this.onSetSidebarOpen(true)} id={item.Produto.Id} style={item.xy}>
                   <FontAwesomeIcon icon={faShoppingBasket} />
                </a>
             );
          }), document.getElementById("Produtos"));
-      
    }
 
    showProduto = (e) => {
@@ -59,9 +56,11 @@ class Buttons extends React.Component {
  
    render() {
      return (
-        <div id="Produtos">
-
+        <div>
+            <LeftSideModal />
+            <div id="Produtos"></div>
         </div>
+
      );
    }
  }
