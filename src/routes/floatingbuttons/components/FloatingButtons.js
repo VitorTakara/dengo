@@ -32,7 +32,7 @@ class Page extends React.Component {
 
    render() {
       return (
-         <div className="floating-buttons">
+         <div className="floating-buttons bottom">
             <div className="buttons-left">
                <a href="#"><FontAwesomeIcon icon={faQuestionCircle} /></a>
                <a href="#"><FontAwesomeIcon icon={faBookOpen} /></a>

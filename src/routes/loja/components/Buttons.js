@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
 import LeftSideModal from './../../sidebar/components/sidebar.js' 
 
@@ -57,10 +57,13 @@ class Buttons extends React.Component {
    render() {
      return (
         <div>
-            <LeftSideModal />
             <div id="Produtos"></div>
+            <div className="floating-buttons top bg-warning">
+               <div className="buttons-right">
+                  <a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a>
+               </div>
+            </div>
         </div>
-
      );
    }
  }

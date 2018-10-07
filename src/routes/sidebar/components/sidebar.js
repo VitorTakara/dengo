@@ -4,15 +4,12 @@ import SidebarContent from "./sidebar_content.js";
 
 import Sidebar from "react-sidebar";
 
-var sectionStyle = {
-  backgroundImage: "url(https://i.imgur.com/APIEeGT.jpg)"
-};
-
 class LeftSideModal extends React.Component {
    constructor(props) {
       super(props);
+      console.log(this.props)
       this.state = {
-        sidebarOpen: true,
+        sidebarOpen: this.props.sidebarOpen,
         produto: {
           Nome: "Chocolate Amargo 75% 20g",
           Preco: 4.8
@@ -27,18 +24,13 @@ class LeftSideModal extends React.Component {
   
     render() {
       return (
-         <div className="w-100 h-100" style={ sectionStyle }>
         <Sidebar
           sidebar={<SidebarContent produto={ this.state.produto }></SidebarContent>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "#ffffffc2" } }}
         >
-          <button onClick={() => this.onSetSidebarOpen(true)}>
-            Open sidebar
-          </button>
         </Sidebar>
-        </div>
       );
     }
   }
