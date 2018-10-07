@@ -1,17 +1,15 @@
 import React from 'react';
-
-import SidebarContent from "./sidebar_content.js";
-
+import SidebarContent from "./carrinho_content.js";
 import Sidebar from "react-sidebar";
 
-class LeftSideModal extends React.Component {
+class Carrinho extends React.Component {
    constructor(props) {
       super(props);
-      console.log(props);
+      
       this.state = {
-        sidebarOpen: false,
+        sidebarOpen: true,
         produto: {
-          Nome: props.produto.Nome,
+          Nome: "Chocolate Amargo 75% 20g",
           Preco: 4.8
         }
       };
@@ -25,13 +23,14 @@ class LeftSideModal extends React.Component {
     render() {
       return (
         <Sidebar
-          sidebar={<SidebarContent produto={ this.props.produto }></SidebarContent>}
+          sidebar={<SidebarContent produto={ this.state.produto }></SidebarContent>}
           open={this.state.sidebarOpen}
+          pullRight={true} 
           onSetOpen={this.onSetSidebarOpen}
-          styles={{ sidebar: { background: "#ffffffc2", position: "fixed" } }}
+          styles={{ sidebar: { background: "#fff" } }}
         >
         </Sidebar>
       );
     }
   }
-export default LeftSideModal;
+export default Carrinho;
