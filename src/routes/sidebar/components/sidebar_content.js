@@ -3,7 +3,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from 'react-responsive-carousel';
 import Counter from './counter.js';
 
-const Page = () => (
+
+class SidebarContent extends React.Component {
+    render() {
+        return (
     <aside className="p-relative sidebar-container">
         <div className="sidebar-btn-close">X</div>
         <Carousel showThumbs={false} showStatus={false}>
@@ -18,15 +21,17 @@ const Page = () => (
             </div>
         </Carousel>
         <div className="sidebar-info">
-            <h3>Chocolate Amargo 75% 20g</h3>
+            <h3>{this.props.produto.Nome}</h3>
             <small>Ref: 6</small>
             <p className="sidebar-info-desc">Chocolate Amargo 75% cacau produzido com o cacau do João Menezes. Porção de 20g.</p>
         </div>
         <Counter></Counter>
-        <p className="sidebar-price">R$ 4,80</p>
+        <p className="sidebar-price">R$ {this.props.produto.Preco}</p>
             <button type="button" className="button-primary">Adicionar no Carrinho</button>
     </aside>
+    
+    )}
 
-);
+        };
 
-export default Page;
+export default SidebarContent;

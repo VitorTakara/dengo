@@ -42,7 +42,7 @@ class Buttons extends React.Component {
       ReactDOM.render(
          this.produtos.map(item => {
             return (
-               <a href="#" onClick={() => LeftSideModal.setState({ sidebarOpen: true })} id={item.Produto.Id} style={item.xy}>
+               <a href="#" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={item.xy}>
                   <FontAwesomeIcon icon={faShoppingBasket} />
                </a>
             );
