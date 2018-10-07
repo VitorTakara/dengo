@@ -16,7 +16,7 @@ const Passo1 = () => (
 );
 
 const Passo2 = () => (
-   <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+   <Animated animationIn="fadeInRight" animationOut="fadeOut" isVisible={true}>
       <h2>CONVERSE DIRETAMENTE COM O CHOCOLATIER</h2>
       <p>Ao Utilizar nosso chat, você terá suas dúvidas respondidas pelo nosso chocolatier ao vivo. Lembre-se de ativar o som do seu aparelho.</p>
       <p>Além disso, você pode selecionar os produtos direto da prateleira para obter mais informações e/ou adicioná-lo em seu carrinho de compras</p>
@@ -24,7 +24,7 @@ const Passo2 = () => (
 );
 
 const Passo3 = () => (
-   <Animated animationIn="slideInRight" animationOut="fadeOut" isVisible={true}>
+   <Animated animationIn="fadeInRight" animationOut="fadeOut" isVisible={true}>
       <h2>FINALIZE SUA COMPRA</h2>
       <p>Clique no carrinho para visualizar seus produtos e finalize a compra. Assim que o pagamento for processado, seu chocolate será embalado e enviado para você em tempo real.</p>
    </Animated>
