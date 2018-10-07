@@ -14,6 +14,11 @@ const sidebar = Loadable({
   loading: Loading,
 });
 
+const carrinho = Loadable({
+  loader: () => import('./routes/carrinho/index.js'),
+  loading: Loading,
+});
+
 const Tutorial = Loadable({
   loader: () => import('./routes/tutorial/index.js'),
   loading: Loading,
@@ -31,6 +36,7 @@ const Routes = () => (
       <Switch>
          <Route exact path="/" component={Home}/>
          <Route path="/sidebar" component={sidebar} />
+         <Route path="/carrinho" component={carrinho} />
          <Route path="/Tutorial" component={Tutorial} />
          <Route path="/Loja" component={Loja} />
       </Switch>
