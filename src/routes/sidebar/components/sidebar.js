@@ -7,11 +7,11 @@ import Sidebar from "react-sidebar";
 class LeftSideModal extends React.Component {
    constructor(props) {
       super(props);
-      
+      console.log(props);
       this.state = {
         sidebarOpen: true,
         produto: {
-          Nome: "Chocolate Amargo 75% 20g",
+          Nome: props.produto.Nome,
           Preco: 4.8
         }
       };
@@ -25,10 +25,10 @@ class LeftSideModal extends React.Component {
     render() {
       return (
         <Sidebar
-          sidebar={<SidebarContent produto={ this.state.produto }></SidebarContent>}
+          sidebar={<SidebarContent produto={ this.props.produto }></SidebarContent>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
-          styles={{ sidebar: { background: "#ffffffc2" } }}
+          styles={{ sidebar: { background: "#ffffffc2", position: "fixed" } }}
         >
         </Sidebar>
       );

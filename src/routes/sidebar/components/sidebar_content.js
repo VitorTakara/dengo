@@ -22,8 +22,8 @@ class SidebarContent extends React.Component {
         </Carousel>
         <div className="sidebar-info">
             <h3>{this.props.produto.Nome}</h3>
-            <small>Ref: 6</small>
-            <p className="sidebar-info-desc">Chocolate Amargo 75% cacau produzido com o cacau do João Menezes. Porção de 20g.</p>
+            <small>Ref: {this.props.produto.Id}</small>
+            <p className="sidebar-info-desc">{this.props.produto.Descricao}</p>
         </div>
         <Counter></Counter>
         <p className="sidebar-price">R$ {this.props.produto.Preco}</p>
