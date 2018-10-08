@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
 
 class Buttons extends React.Component {
@@ -37,7 +37,7 @@ class Buttons extends React.Component {
             <div id="Produtos"></div>
             <div className="floating-buttons top bg-warning">
                <div className="buttons-right">
-                  <a href="#"><FontAwesomeIcon icon={faShoppingCart} onClick={() => this.props.cart()} /></a>
+                  <span><FontAwesomeIcon icon={faShoppingCart} onClick={() => this.props.cart()} /></span>
                </div>
             </div>
         </div>

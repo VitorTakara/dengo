@@ -15,17 +15,31 @@ class Page extends React.Component {
         };
     }
 
-   render() {
-      return (
-         <div className="floating-buttons bottom">
-            <div className="buttons-left">
-               <a href="#"><FontAwesomeIcon icon={faQuestionCircle} /></a>
-               <a href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen} /></a>
-            </div>
-            <div className="buttons-right">
-               <a href="#">PT</a>
-               <a href="#"><FontAwesomeIcon icon={faComments} /></a>
-               <a href="#" onClick={this.BtnMute} id="btnMute"><BtnVolumeDown /></a>
+    BtnMute = (e) => {
+        if (!this.state.Volume) {
+            ReactDOM.render(
+                <BtnVolumeUp/>, document.getElementById("btnMute"));
+        } else {
+            ReactDOM.render(
+                <BtnVolumeDown/>, document.getElementById("btnMute"));
+        }
+        this.setState({
+            Volume: !this.state.Volume
+        });
+    };
+
+    render() {
+        return (
+            <div className="floating-buttons bottom">
+                <div className="buttons-left">
+                    <span><FontAwesomeIcon icon={faQuestionCircle}/></span>
+                    <span href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen} /></span>
+                </div>
+                <div className="buttons-right">
+                    <span>PT</span>
+                    <span><FontAwesomeIcon icon={faComments}/></span>
+                    <span onClick={this.BtnMute} id="btnMute"><BtnVolumeDown/></span>
+                </div>
             </div>
         );
     }
