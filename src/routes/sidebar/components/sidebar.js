@@ -25,7 +25,7 @@ class LeftSideModal extends React.Component {
     render() {
       return (
         <Sidebar
-          sidebar={<SidebarContent produto={ this.props.produto }></SidebarContent>}
+          sidebar={<SidebarContent produto={ this.props.produto } addToCart={this.props.addToCart} close={this.props.close}></SidebarContent>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "#ffffffc2", position: "fixed" } }}

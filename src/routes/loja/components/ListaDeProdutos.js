@@ -1,22 +1,51 @@
 import React from 'react';
+import {lista} from './APIProdutos.js';
+import ReactDOM from 'react-dom'
 
-import React from 'react';
+class Prod extends React.Component {
+   constructor(props) {
+       super(props);
 
-const Page = () => (
-   <div className="w-100 h-100">
-      <div className="home">
-         <div className="d-flex justify-content-center flex-column p-5 home-content">
-            <div className="home-logo"></div>
-            <div className="align-middle text-center text-white bg-light p-5">
-               <h2>BEM VINDO A LOJA AO VIVO!</h2>
-               <p>A loja ao vivo Dengo nasceu com o objetivo de criar uma nova experiência de compras, 
-               mantendo o toque e a proximidade do contato humano ao mesmo tempo em que utiliza todo o 
-               potencial que a tecnologia e a internet têm a oferecer.</p>
-               <a href="/Tutorial" className="btn btn-outline-light">ENTRAR</a>
+       this.produtos = lista();
+
+       this.handleLoad = this.handleLoad.bind(this);
+   }
+ 
+   componentDidMount() {
+      window.addEventListener("load", this.handleLoad())
+   }
+   
+   handleLoad(){
+      console.log(this.produtos);
+      ReactDOM.render(
+         this.produtos.map(item => {
+            return (
+               <div className="text-center mb-5">
+                  <div className="">
+                     <h4>{item.Produto.Nome}</h4>
+                     <h6>{item.Produto.Descricao}</h6>
+                     <p className="font-weight-bold">R$ {item.Produto.Preco}</p>
+                     <a className="button-primary text-white mt-3" onClick={() => { item.Quantidade = 1; this.props.addToCart(item)}}>Adicionar ao Carrinho</a>
+                     <hr className="mt-5" />
+                  </div>
+               </div>
+            );
+         }), document.getElementById("ListaDeProdutos")
+      );
+   }
+
+   render() {
+      return (
+         <div className="modal-container">
+            <div className="d-flex modal-content justify-content-center flex-column p-5 text-center text-black bg-light m-5">
+               <a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
+               <div className="top-logo"></div>
+               <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container">
+               </div>
             </div>
          </div>
-      </div>
-   </div>
-);
+      );
+   }
+}
 
-export default Page;
+export default Prod;
