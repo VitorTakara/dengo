@@ -39,8 +39,10 @@ class CarrinhoContent extends React.Component {
     
     handleLoad() {
         if(this.props.produtos.length > 0){
+            let valorTotal = 0;
             ReactDOM.render(
                 this.props.produtos.map(item => {
+                    valorTotal += item.Preco * item.Quantidade;
                     return (
                         <div className="carrinho-card">
                             <div className="carrinho-card-img">
@@ -53,7 +55,13 @@ class CarrinhoContent extends React.Component {
                             </div>
                         </div>
                     );
-                }), document.getElementById("ProdutosCarrinho")
+                }), document.getElementById("ProdutosCarrinho"), (
+                    ReactDOM.render(
+                        <div>
+                            <button type="button" className="button-primary">Finalizar Compra</button>
+                            <p className="m-0">Total: {valorTotal}</p>
+                        </div>
+                    , document.getElementById("checkout")))
             );
         }
         else{
@@ -74,9 +82,8 @@ class CarrinhoContent extends React.Component {
             <aside className="p-relative carrinho-container">
                 <a href="#" className="text-primary carrinho-btn-close" onClick={() => this.props.close()}>X</a>
                 <div id="ProdutosCarrinho"></div>
-                <div className="carrinho-checkout">
-                    <button type="button" className="button-primary">Finalizar Compra</button>
-                    <p className="m-0">Total: R$14,40</p>
+                <div className="carrinho-checkout" id="checkout">
+                    
                 </div>
                 <small className="mt-15 d-flex">você será redirecionado para um ambiente seguro</small>
             </aside>

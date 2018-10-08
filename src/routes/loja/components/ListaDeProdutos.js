@@ -25,7 +25,7 @@ class Prod extends React.Component {
                      <h4>{item.Produto.Nome}</h4>
                      <h6>{item.Produto.Descricao}</h6>
                      <p className="font-weight-bold">R$ {item.Produto.Preco}</p>
-                     <a className="button-primary text-white mt-3" onClick={() => { item.Quantidade = 1; this.props.addToCart(item)}}>Adicionar ao Carrinho</a>
+                     <a className="button-primary text-white mt-3" onClick={() => { item.Produto.Quantidade = 1; this.props.addToCart(item.Produto)}}>Adicionar ao Carrinho</a>
                      <hr className="mt-5" />
                   </div>
                </div>
