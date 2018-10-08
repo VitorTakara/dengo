@@ -27,7 +27,7 @@ class Carrinho extends React.Component {
           open={this.state.sidebarOpen}
           pullRight={true} 
           onSetOpen={this.onSetSidebarOpen}
-          styles={{ sidebar: { background: "#fff" } }}
+          styles={{ sidebar: { background: "#fff", position: "fixed"  } }}
         >
         </Sidebar>
       );
