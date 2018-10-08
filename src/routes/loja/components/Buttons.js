@@ -18,11 +18,12 @@ class Buttons extends React.Component {
       ReactDOM.render(
          this.props.produtos.map(item => {
             return (
-               <a href="#" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={item.xy}>
+               <a href="#" className="btn-produto" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={item.xy}>
                   <FontAwesomeIcon icon={faShoppingBasket} />
                </a>
             );
-         }), document.getElementById("Produtos"));
+         }), document.getElementById("Produtos")
+      );
    }
 
    showProduto = (e) => {
@@ -36,7 +37,7 @@ class Buttons extends React.Component {
             <div id="Produtos"></div>
             <div className="floating-buttons top bg-warning">
                <div className="buttons-right">
-                  <a href="#"><FontAwesomeIcon icon={faShoppingCart} /></a>
+                  <a href="#"><FontAwesomeIcon icon={faShoppingCart} onClick={() => this.props.cart()} /></a>
                </div>
             </div>
         </div>
