@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
 
 class Buttons extends React.Component {
