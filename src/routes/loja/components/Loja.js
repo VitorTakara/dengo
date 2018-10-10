@@ -60,10 +60,9 @@ class Loja extends React.Component {
       return (
             <div className="h-100">
                <div id="ProdutoSideBar"></div>
-                        <DragScroll className="p-relative" height={'100%'} width={'100vw'}>
+                        <DragScroll className="p-relative ov-hidden" height={'100%'} width={'100vw'}>
                            <Buttons produtos={this.produtos} click={this.setProduto} cart={this.AbrirCarrinho} />
-                     <div className="loja-bg h-100">
-                     </div>
+                           <div className="loja-bg"></div>
                         </DragScroll>
                <div id="Modal" class="d-none"></div>
                <FloatingButtons click={this.ListaDeProdutos} />

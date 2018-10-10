@@ -61,11 +61,14 @@ html, body, #root, .App{
 }
 
 .loja-bg{
-  width: 2500px;
-  background-image: url(./../images/bg.jpg);
-  background-position: center top;
-  background-size: cover;
+  width: 2394px;
+  min-height: 764px;
+  height: 100vh;
+  background-image: url($bgLoja);
+  background-position: left top;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
 }
 
 .btn-produto{
