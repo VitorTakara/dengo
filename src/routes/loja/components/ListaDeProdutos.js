@@ -38,7 +38,7 @@ class Prod extends React.Component {
       return (
         <div className="black-screen pos-fixed" onClick={() => this.props.closeProdutos()}>
             <div className="modal-container">
-                <div className="d-flex modal-content justify-content-center flex-column p-5 text-center text-black bg-light m-5">
+                <div className="d-flex modal-content justify-content-center flex-column p-3 text-center text-black bg-light">
                     <a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
                     <div className="top-logo"></div>
                     <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container">

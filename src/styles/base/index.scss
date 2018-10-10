@@ -41,7 +41,6 @@ html, body, #root, .App{
 
 .tutorial-content{
   height: 100%;
-  margin-top: -150px;
 }
 
 .home{
@@ -65,13 +64,14 @@ html, body, #root, .App{
   width: 2500px;
   background-image: url(./../images/bg.jpg);
   background-position: center top;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
-  .btn-produto{
-    position: absolute;
-    font-size: 3em;
-    color: #fff;
-  }
+}
+
+.btn-produto{
+  position: absolute;
+  font-size: 3em;
+  color: #fff;
 }
 
 .floating-buttons{

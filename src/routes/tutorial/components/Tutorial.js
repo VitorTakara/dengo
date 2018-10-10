@@ -28,10 +28,9 @@ class Page extends React.Component {
       return (
          <div className="w-100 h-100 p-4">
             <div className="tutorial">
-               <div className="top-logo">
-               </div>
-               <div className="d-flex justify-content-center flex-column p-5 tutorial-content">
-                  <div className="align-middle text-center text-white p-5">
+               <div className="d-flex justify-content-center flex-column tutorial-content">
+                  <div className="top-logo"></div>
+                  <div className="align-middle text-center text-white">
                      <div id="Passos" className="m-5">
                         <Passo1 />
                      </div>
