@@ -53,8 +53,6 @@ class Loja extends React.Component {
       this.carrinho.push(item);
       if(sideBar)
          this.closeSideBar();
-
-      console.log(this.carrinho);
    }
 
    render() {
