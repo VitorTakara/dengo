@@ -20,15 +20,15 @@ class Prod extends React.Component {
       ReactDOM.render(
          this.produtos.map(item => {
             return (
-               <div className="text-center mb-5">
-                  <div className="">
-                     <h4>{item.Produto.Nome}</h4>
-                     <h6>{item.Produto.Descricao}</h6>
-                     <p className="font-weight-bold">R$ {item.Produto.Preco}</p>
-                     <a className="button-primary text-white mt-3" onClick={() => { item.Produto.Quantidade = 1; this.props.addToCart(item.Produto)}}>Adicionar ao Carrinho</a>
-                     <hr className="mt-5" />
-                  </div>
-               </div>
+                <div className="text-center mb-5">
+                    <div className="">
+                        <h4>{item.Produto.Nome}</h4>
+                        <h6>{item.Produto.Descricao}</h6>
+                        <p className="font-weight-bold">R$ {item.Produto.Preco}</p>
+                        <a className="button-primary text-white mt-3" onClick={() => { item.Produto.Quantidade = 1; this.props.addToCart(item.Produto)}}>Adicionar ao Carrinho</a>
+                        <hr className="mt-5" />
+                    </div>
+                </div>
             );
          }), document.getElementById("ListaDeProdutos")
       );
@@ -36,14 +36,16 @@ class Prod extends React.Component {
 
    render() {
       return (
-         <div className="modal-container">
-            <div className="d-flex modal-content justify-content-center flex-column p-5 text-center text-black bg-light m-5">
-               <a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
-               <div className="top-logo"></div>
-               <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container">
-               </div>
+        <div className="black-screen pos-fixed" onClick={() => this.props.closeProdutos()}>
+            <div className="modal-container">
+                <div className="d-flex modal-content justify-content-center flex-column p-5 text-center text-black bg-light m-5">
+                    <a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
+                    <div className="top-logo"></div>
+                    <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container">
+                    </div>
+                </div>
             </div>
-         </div>
+        </div>
       );
    }
 }
