@@ -33,8 +33,11 @@ class Loja extends React.Component {
       // Aqui a gente chama o SideBar e coloca as infos do produto
    }
 
-   closeSideBar = () => {
-      ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
+   closeSideBar = (sidebar) => {
+      if(sidebar != undefined)
+         setTimeout(() => {
+            ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
+         }, 300);
    }
 
    setProduto = ( p ) => {

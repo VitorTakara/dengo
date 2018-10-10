@@ -18,12 +18,14 @@ class Carrinho extends React.Component {
 
     onSetSidebarOpen(open) {
       this.setState({ sidebarOpen: open });
+      if(!open)
+         this.props.close('carrinho')
     }
   
     render() {
       return (
         <Sidebar
-          sidebar={<SidebarContent produtos={ this.props.produtos } close={this.props.close}></SidebarContent>}
+          sidebar={<SidebarContent produtos={ this.props.produtos } close={this.onSetSidebarOpen}></SidebarContent>}
           open={this.state.sidebarOpen}
           pullRight={true} 
           onSetOpen={this.onSetSidebarOpen}
