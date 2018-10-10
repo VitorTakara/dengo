@@ -10,6 +10,8 @@ import FloatingButtons from './../../floatingbuttons/index.js'
 import Carrinho from './../../carrinho/components/carrinho.js'
 import ListaDeProdutos from './ListaDeProdutos.js'
 import DragScroll from 'react-dragscroll'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Loja extends React.Component {
    constructor(props) {
@@ -57,6 +59,16 @@ class Loja extends React.Component {
       this.carrinho.push(item);
       if(sideBar)
          this.closeSideBar();
+
+      toast('✓ PRODUTO INSERIDO COM SUCESSO!', 
+      {
+         position: "top-right",
+         autoClose: 2500,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: false,
+         draggable: true
+      });
    }
 
    render() {
@@ -69,6 +81,7 @@ class Loja extends React.Component {
                         </DragScroll>
                <div id="Modal" class="d-none"></div>
                <FloatingButtons click={this.ListaDeProdutos} />
+               <ToastContainer bodyClassName="toastr-produto" progressClassName="toastr-produto-progress" />
             </div>
       );
    }

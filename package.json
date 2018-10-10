@@ -18,6 +18,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "react-sidebar": "^3.0.2",
+    "react-toastify": "^4.4.0",
     "reactstrap": "^6.5.0"
   },
   "scripts": {
