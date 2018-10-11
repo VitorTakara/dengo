@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.2/workbox-sw.js");
 
 importScripts(
-  "/dengo/build/precache-manifest.f12d8f71fa88b76e7466377224bdb996.js"
+  "/dengo/build/precache-manifest.cbf05384cc75b08ea1f82571dd4791c4.js"
 );
 
 workbox.clientsClaim();

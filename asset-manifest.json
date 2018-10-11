@@ -27,7 +27,7 @@
   "runtime~main.js": "/dengo/build/static/js/runtime~main.1937c598.js",
   "runtime~main.js.map": "/dengo/build/static/js/runtime~main.1937c598.js.map",
   "static/media/logo_dengo.png": "/dengo/build/static/media/logo_dengo.1743fd21.png",
-  "static/media/App.scss": "/dengo/build/static/media/logo_color_dengo.f79025db.png",
+  "static/media/App.scss": "/dengo/build/static/media/bg_loja.6b2c8cf8.jpg",
   "static/media/bemvindo.jpg": "/dengo/build/static/media/bemvindo.4dc633ee.jpg",
   "static/media/bg_telasiniciais.jpg": "/dengo/build/static/media/bg_telasiniciais.7c7ce38f.jpg",
   "static/css/1.431202e0.chunk.css.map": "/dengo/build/static/css/1.431202e0.chunk.css.map",
@@ -36,6 +36,6 @@
   "static/css/7.87acd606.chunk.css.map": "/dengo/build/static/css/7.87acd606.chunk.css.map",
   "static/css/9.1f6f9f47.chunk.css.map": "/dengo/build/static/css/9.1f6f9f47.chunk.css.map",
   "index.html": "/dengo/build/index.html",
-  "precache-manifest.f12d8f71fa88b76e7466377224bdb996.js": "/dengo/build/precache-manifest.f12d8f71fa88b76e7466377224bdb996.js",
+  "precache-manifest.cbf05384cc75b08ea1f82571dd4791c4.js": "/dengo/build/precache-manifest.cbf05384cc75b08ea1f82571dd4791c4.js",
   "service-worker.js": "/dengo/build/service-worker.js"
 }

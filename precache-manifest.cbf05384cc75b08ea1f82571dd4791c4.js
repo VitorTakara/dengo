@@ -40,12 +40,12 @@ self.__precacheManifest = [
     "url": "/dengo/build/static/js/6.dd6db0af.chunk.js"
   },
   {
-    "revision": "6b2c8cf80ce84ee32f9db50cc89aaa3b",
-    "url": "/dengo/build/static/media/bg_loja.6b2c8cf8.jpg"
-  },
-  {
     "revision": "f79025dbcbcac0c934ec69458470ba9a",
     "url": "/dengo/build/static/media/logo_color_dengo.f79025db.png"
+  },
+  {
+    "revision": "6b2c8cf80ce84ee32f9db50cc89aaa3b",
+    "url": "/dengo/build/static/media/bg_loja.6b2c8cf8.jpg"
   },
   {
     "revision": "054b8cc274c3eea213ba",
