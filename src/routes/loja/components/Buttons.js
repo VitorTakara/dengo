@@ -11,12 +11,12 @@ class Buttons extends React.Component {
    }
 
    componentDidMount() {
-      window.addEventListener('load', this.handleLoad);
+      window.addEventListener('load', this.handleLoad());
    }
   
    handleLoad() {
       ReactDOM.render(
-         this.props.produtos.map(item => {
+         this.props.produtos.produtos.map(item => {
             return (
                <a href="#" className="btn-produto" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={item.xy}>
                   <FontAwesomeIcon icon={faShoppingBasket} />

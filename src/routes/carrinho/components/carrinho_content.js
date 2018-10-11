@@ -6,29 +6,6 @@ import ReactDOM from 'react-dom';
 class CarrinhoContent extends React.Component {
     constructor(props) {
         super(props);
-
-        this.produtos = [
-            {
-                Nome: 'Teste 1',
-                Quantidade: 3,
-                Preco: 1.1
-            },
-            {
-                Nome: 'Teste 2',
-                Quantidade: 5,
-                Preco: 16.1
-            },
-            {
-                Nome: 'Teste 3',
-                Quantidade: 3,
-                Preco: 5.1
-            },
-            {
-                Nome: 'Teste 4',
-                Quantidade: 2,
-                Preco: 11.1
-            }
-        ];
   
         this.handleLoad = this.handleLoad.bind(this);
     }
@@ -46,7 +23,7 @@ class CarrinhoContent extends React.Component {
                     return (
                         <div className="carrinho-card">
                             <div className="carrinho-card-img">
-                                <img src="https://picsum.photos/600/600/"/>
+                                <img src={item.Imagens[0]}/>
                             </div>
                             <div className="carrinho-card-info">
                                 <h5>{item.Nome}</h5>

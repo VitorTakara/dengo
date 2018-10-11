@@ -13,8 +13,7 @@ html, body, #root, .App{
 #root{
   background-image: url(./../images/bg_loja.jpg);
   background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .black-screen{
@@ -103,6 +102,12 @@ html, body, #root, .App{
         animation:spin 3s linear infinite;
     }
   }
+}
+
+.btn-produto{
+  position: absolute;
+  font-size: 3em;
+  color: #fff;
 }
 
 .floating-buttons{

@@ -1,12 +1,10 @@
 import React from 'react';
-import {lista} from './APIProdutos.js';
+import Lista from './APIProdutos.js';
 import ReactDOM from 'react-dom'
 
 class Prod extends React.Component {
    constructor(props) {
        super(props);
-
-       this.produtos = lista();
 
        this.handleLoad = this.handleLoad.bind(this);
    }
@@ -16,9 +14,8 @@ class Prod extends React.Component {
    }
    
    handleLoad(){
-      console.log(this.produtos);
       ReactDOM.render(
-         this.produtos.map(item => {
+         this.props.produtos.map(item => {
             return (
                 <div className="text-center mb-5">
                     <div className="">
