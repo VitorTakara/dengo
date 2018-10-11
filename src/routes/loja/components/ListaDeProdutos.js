@@ -22,7 +22,7 @@ class Prod extends React.Component {
                         <h4>{item.Produto.Nome}</h4>
                         <h6>{item.Produto.Descricao}</h6>
                         <p className="font-weight-bold">R$ {item.Produto.Preco}</p>
-                        <a className="button-primary text-white mt-3" onClick={() => { item.Produto.Quantidade = 1; this.props.addToCart(item.Produto)}}>Adicionar ao Carrinho</a>
+                        <a className="button-primary mt-3" onClick={() => { item.Produto.Quantidade = 1; this.props.addToCart(item.Produto)}}>Adicionar ao Carrinho</a>
                         <hr className="mt-5" />
                     </div>
                 </div>
@@ -33,11 +33,11 @@ class Prod extends React.Component {
 
    render() {
       return (
-        <div className="black-screen pos-fixed" onClick={() => this.props.closeProdutos()}>
+        <div className="black-screen pos-fixed z-index-2">
             <div className="modal-container">
                 <div className="d-flex modal-content justify-content-center flex-column p-3 text-center text-black bg-light">
-                    <a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
-                    <div className="top-logo"></div>
+                    <a href="#" className="sidebar-btn-close" onClick={() => this.props.closeProdutos()}>X</a>
+                    <div className="top-logo top-logo-color"></div>
                     <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container">
                     </div>
                 </div>

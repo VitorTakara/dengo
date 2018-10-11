@@ -57,7 +57,7 @@ class CarrinhoContent extends React.Component {
     render() {
         return (
             <aside className="p-relative carrinho-container">
-                <a href="#" className="text-primary carrinho-btn-close" onClick={() => this.props.close()}>X</a>
+                <a href="#" className="carrinho-btn-close" onClick={() => this.props.close()}>X</a>
                 <div id="ProdutosCarrinho"></div>
                 <div className="carrinho-checkout" id="checkout">
                     

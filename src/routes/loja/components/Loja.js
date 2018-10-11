@@ -53,7 +53,6 @@ class Loja extends React.Component {
    }
 
    componentWillUpdate(nextProps, nextState) {
-      console.log(nextState)
       ReactDOM.render(<Buttons produtos={nextState} click={this.setProduto} cart={this.AbrirCarrinho} />,document.getElementById("btnProdutos"))
    }
 
@@ -92,7 +91,7 @@ class Loja extends React.Component {
                   <div id="btnProdutos"></div>
                   <div className="loja-bg"></div>
                </DragScroll>
-               <div id="Modal" class="d-none"></div>
+               <div id="Modal" className="d-none"></div>
                <FloatingButtons click={this.ListaDeProdutos} />
                <ToastContainer bodyClassName="toastr-produto" progressClassName="toastr-produto-progress" />
             </div>

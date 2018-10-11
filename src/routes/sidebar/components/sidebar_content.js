@@ -38,7 +38,7 @@ class SidebarContent extends React.Component {
 	render() {
 		return (
 			<aside className="p-relative sidebar-container">
-					<a href="#" className="text-primary sidebar-btn-close" onClick={() => this.props.close()}>X</a>
+					<a href="#" className="sidebar-btn-close" onClick={() => this.props.close()}>X</a>
 					<div id="imagens"></div>
 					<div className="sidebar-info">
 						<h3>{this.props.produto.Nome}</h3>
