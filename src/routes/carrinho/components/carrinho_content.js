@@ -23,12 +23,15 @@ class CarrinhoContent extends React.Component {
                     return (
                         <div className="carrinho-card">
                             <div className="carrinho-card-img">
-                                <img src={item.Imagens[0]}/>
+                              <img src={item.Imagens[0]}/>
                             </div>
                             <div className="carrinho-card-info">
                                 <h5>{item.Nome}</h5>
                                 <p>Quantidade: {item.Quantidade}</p>
-                                <p>Valor: R$ {item.Preco}</p>
+                                <p>Valor: R$ {item.Preco.toLocaleString('pt-BR', {
+                                                minimumFractionDigits: 2,
+                                                maximumFractionDigits: 2
+                                             })}</p>
                             </div>
                         </div>
                     );
@@ -36,7 +39,10 @@ class CarrinhoContent extends React.Component {
                     ReactDOM.render(
                         <div>
                             <button type="button" className="button-primary">Finalizar Compra</button>
-                            <p className="m-0">Total: {valorTotal}</p>
+                            <p className="m-0">Total: R$ {valorTotal.toLocaleString('pt-BR', {
+                                                            minimumFractionDigits: 2,
+                                                            maximumFractionDigits: 2
+                                                         })}</p>
                         </div>
                     , document.getElementById("checkout")))
             );

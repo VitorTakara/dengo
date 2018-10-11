@@ -46,7 +46,10 @@ class SidebarContent extends React.Component {
 						<p className="sidebar-info-desc">{this.props.produto.Descricao}</p>
 					</div>
 					<Counter></Counter>
-					<p className="sidebar-price">R$ {this.props.produto.Preco}</p>
+					<p className="sidebar-price">R$ {this.props.produto.Preco.toLocaleString('pt-BR', {
+                                                                           minimumFractionDigits: 2,
+                                                                           maximumFractionDigits: 2
+                                                                        })}</p>
 					<button type="button" className="button-primary" onClick={() => { this.props.produto.Quantidade = Number(document.querySelector("#counterValue").textContent); this.props.addToCart(this.props.produto, true)}}>Adicionar no Carrinho</button>
 			</aside>
 		)
