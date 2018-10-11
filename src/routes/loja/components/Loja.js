@@ -94,7 +94,7 @@ class Loja extends React.Component {
    adicionarAoCarrinho = (item, sideBar = false) =>{
       this.carrinho.push(item);
       if(sideBar)
-         this.closeSideBar();
+         this.closeSideBar('a');
 
       toast('✓ PRODUTO INSERIDO COM SUCESSO!', 
       {
