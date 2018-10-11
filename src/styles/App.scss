@@ -4,6 +4,9 @@
 // Base
 @import "base/index.scss";
 
+// Animations
+@import "animations/index.scss";
+
 // Components
 @import "components/sidebar/index.scss";
 @import "components/buttons/index.scss";
@@ -11,7 +14,7 @@
 @import "components/carrinho/index.scss";
 
 // Views
-// @import "views/home/index.scss";
+@import "views/tutorial/index.scss";
 
 // Helper classes
 @import "helper_classes/index.scss";
