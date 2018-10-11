@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
 body{
-  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 }
 
 html, body, #root, .App{
@@ -8,9 +11,10 @@ html, body, #root, .App{
 }
 
 #root{
-  background-image: url(./../images/bg.jpg);
+  background-image: url(./../images/bg_loja.jpg);
   background-position: center top;
-  background-size: 100% auto;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .black-screen{
@@ -63,7 +67,7 @@ html, body, #root, .App{
 
 .loja-bg{
   width: 2500px;
-  background-image: url(./../images/bg.jpg);
+  background-image: url(./../images/bg_loja.jpg);
   background-position: center top;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -71,6 +75,31 @@ html, body, #root, .App{
     position: absolute;
     font-size: 3em;
     color: #fff;
+
+    &::after{
+      position: absolute;
+      content:'';
+      top: 35px;
+      left:25px;
+      height: 0px;
+      width: 0px;
+      border-radius: 50%;
+      border: 4px dotted rgba(255, 255, 255, 0);
+      opacity: 0;
+      transition: .3s;
+    }
+
+    &:hover::after{
+      top: -14px;
+      left: -24px;
+      height: 100px;
+      width: 100px;
+      opacity: 1;
+      border: 7px dotted #fff;
+      -webkit-animation:spin 3s linear infinite;
+        -moz-animation:spin 3s linear infinite;
+        animation:spin 3s linear infinite;
+    }
   }
 }
 
@@ -101,6 +130,10 @@ html, body, #root, .App{
       color: #ffffff;
       text-decoration: none;
       margin-right: 15px;
+      transition: color .2s;
+      &:hover{
+        color: #aeaeae;
+      }
     }
     position: absolute;
     margin: 15px;
@@ -112,6 +145,11 @@ html, body, #root, .App{
       color: #ffffff;
       text-decoration: none;
       margin-left: 15px;
+      transition: color .2s;
+      
+      &:hover{
+        color: #aeaeae;
+      }
     }
     position: absolute;
     margin: 15px;
@@ -150,6 +188,24 @@ html, body, #root, .App{
   overflow: auto;
 }
 .sidebar-btn-close{
+  font-size: 30px;
+  position: absolute;
+  top: 15px;
+  right: 16px;
+  color: $primary-color;
+  background: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .5s;
   text-decoration: none;
-  color:#212529;
+  
+  &:hover{
+      background: rgb(218, 218, 218);
+      text-decoration: none;
+      color: $primary-color;
+  }
 }
