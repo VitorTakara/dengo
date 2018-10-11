@@ -12,6 +12,7 @@ import ListaDeProdutos from './ListaDeProdutos.js'
 import DragScroll from 'react-dragscroll'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Div100vh from 'react-div-100vh';
 
 class Loja extends React.Component {
    constructor(props) {
@@ -22,6 +23,30 @@ class Loja extends React.Component {
        };
       
       this.carrinho = [];
+
+      this.updateDimensions = this.updateDimensions.bind(this);
+   }
+
+   updateDimensions = (div) => {
+      setTimeout(() => {
+         let lojabg = document.querySelector(".loja-bg")
+
+         let xy = 2394 / 768;
+
+         let windowHeight = document.querySelector("#abc").offsetHeight
+
+         lojabg.style.height = windowHeight
+         lojabg.style.width = (xy * windowHeight) + 'px';
+         let produtos = document.querySelectorAll("#Produtos a")
+         produtos.forEach(prod => {
+            prod.style.left = (lojabg.offsetWidth * prod.dataset.x / 100) + 'px';
+            prod.style.top = (lojabg.offsetHeight * prod.dataset.y / 100) + 'px';
+         });
+      }, 100);
+   }
+
+   componentDidMount = () => {
+      window.addEventListener("resize", this.updateDimensions);
    }
 
    ListaDeProdutos = () => {
@@ -53,7 +78,7 @@ class Loja extends React.Component {
    }
 
    componentWillUpdate(nextProps, nextState) {
-      ReactDOM.render(<Buttons produtos={nextState} click={this.setProduto} cart={this.AbrirCarrinho} />,document.getElementById("btnProdutos"))
+      ReactDOM.render(<Buttons produtos={nextState} click={this.setProduto} cart={this.AbrirCarrinho} />,document.getElementById("btnProdutos"), () => this.updateDimensions(document.getElementById("btnProdutos")))
    }
 
    carregarProdutos = ( produtos ) => {
@@ -84,17 +109,18 @@ class Loja extends React.Component {
 
    render() {
       return (
-            <div className="h-100">
-               <Lista getProduto={this.carregarProdutos}  />
-               <div id="ProdutoSideBar"></div>
-               <DragScroll className="p-relative ov-hidden dragscroll" height={'100%'} width={'100vw'}>
+         <div id="abc" class='h100'>
+            <Lista getProduto={this.carregarProdutos}  />
+            <div id="ProdutoSideBar"></div>
+            <DragScroll className="p-relative ov-hidden h100 dragscroll" height={'100%'} width={'100vw'}>
+               <div className="loja-bg">
                   <div id="btnProdutos"></div>
-                  <div className="loja-bg"></div>
-               </DragScroll>
-               <div id="Modal" className="d-none"></div>
-               <FloatingButtons click={this.ListaDeProdutos} />
-               <ToastContainer bodyClassName="toastr-produto" progressClassName="toastr-produto-progress" />
-            </div>
+               </div>
+            </DragScroll>
+            <div id="Modal" className="d-none"></div>
+            <ToastContainer bodyClassName="toastr-produto" progressClassName="toastr-produto-progress" />
+            <FloatingButtons click={this.ListaDeProdutos} />
+         </div>
       );
    }
 }

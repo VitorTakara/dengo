@@ -18,7 +18,7 @@ class Buttons extends React.Component {
       ReactDOM.render(
          this.props.produtos.produtos.map(item => {
             return (
-               <a href="#" className="btn-produto" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={item.xy}>
+               <a href="#" data-x={item.xy.top} data-y={item.xy.left} className="btn-produto" onClick={() => this.props.click(item.Produto)} id={item.Produto.Id} style={ {top : item.xy.top, left : item.xy.left}}>
                   <FontAwesomeIcon icon={faShoppingBasket} />
                </a>
             );
