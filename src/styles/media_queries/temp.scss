@@ -1,0 +1,57 @@
+@media screen and (max-width: 780px){
+   .modal-container{
+      border-radius: 0;
+      margin: 0;
+      height: 100%;
+   }
+
+   .modal-items-container{
+      padding: 1rem!important;
+   }
+
+   .dragscroll{
+      overflow: auto!important;
+   }
+}
+
+
+//Toastr
+.toastr-produto{
+   color: #212121;
+   padding: 15px 15px 15px 15px;
+   text-transform: uppercase;
+
+   &-progress{
+      background: #212121!important;
+   }
+}
+
+.progress{
+   background-color: #212121;
+}
+
+//scrollbar
+::-webkit-scrollbar{
+   width: 5px;
+}
+   
+// Esconder scrollbar no dragscroll
+.dragscroll::-webkit-scrollbar{
+   width: 0px!important;
+   height: 0px!important;
+}
+
+::-webkit-scrollbar-track{
+   background: #e2e2e2; 
+}
+
+::-webkit-scrollbar-thumb{
+   background: #212121; 
+   border-radius:5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+   background: #515151; 
+}
+
+.dragscroll {cursor: -webkit-grab; cursor: grab;}

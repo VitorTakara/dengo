@@ -20,12 +20,14 @@ class LeftSideModal extends React.Component {
 
     onSetSidebarOpen(open) {
       this.setState({ sidebarOpen: open });
+      if(!open)
+         this.props.close('sidebar')
     }
   
     render() {
       return (
         <Sidebar
-          sidebar={<SidebarContent produto={ this.props.produto } addToCart={this.props.addToCart} close={this.props.close}></SidebarContent>}
+          sidebar={<SidebarContent produto={ this.props.produto } addToCart={this.props.addToCart} close={this.onSetSidebarOpen}></SidebarContent>}
           open={this.state.sidebarOpen}
           onSetOpen={this.onSetSidebarOpen}
           styles={{ sidebar: { background: "#ffffffc2", position: "fixed" } }}

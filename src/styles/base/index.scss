@@ -45,7 +45,6 @@ html, body, #root, .App{
 
 .tutorial-content{
   height: 100%;
-  margin-top: -150px;
 }
 
 .home{
@@ -66,11 +65,14 @@ html, body, #root, .App{
 }
 
 .loja-bg{
-  width: 2500px;
-  background-image: url(./../images/bg_loja.jpg);
-  background-position: center top;
-  background-size: 100%;
+  width: 2394px;
+  min-height: 764px;
+  height: 100vh;
+  background-image: url($bgLoja);
+  background-position: left top;
   background-repeat: no-repeat;
+  background-size: auto 100%;
+  overflow: hidden;
   .btn-produto{
     position: absolute;
     font-size: 3em;

@@ -9,6 +9,9 @@ import {lista} from './APIProdutos.js'
 import FloatingButtons from './../../floatingbuttons/index.js'
 import Carrinho from './../../carrinho/components/carrinho.js'
 import ListaDeProdutos from './ListaDeProdutos.js'
+import DragScroll from 'react-dragscroll'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class Loja extends React.Component {
    constructor(props) {
@@ -33,8 +36,11 @@ class Loja extends React.Component {
       // Aqui a gente chama o SideBar e coloca as infos do produto
    }
 
-   closeSideBar = () => {
-      ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
+   closeSideBar = (sidebar) => {
+      if(sidebar != undefined)
+         setTimeout(() => {
+            ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
+         }, 300);
    }
 
    setProduto = ( p ) => {
@@ -54,21 +60,29 @@ class Loja extends React.Component {
       if(sideBar)
          this.closeSideBar();
 
-      console.log(this.carrinho);
+      toast('✓ PRODUTO INSERIDO COM SUCESSO!', 
+      {
+         position: "top-right",
+         autoClose: 2500,
+         hideProgressBar: false,
+         closeOnClick: true,
+         pauseOnHover: false,
+         draggable: true
+      });
    }
 
    render() {
       return (
-         <div className="h-100">
-            <div className="loja-bg h-100">
+            <div className="h-100">
                <div id="ProdutoSideBar"></div>
-               <div className='black-screen'>
-                  <Buttons produtos={this.produtos} click={this.setProduto} cart={this.AbrirCarrinho} />
-               </div>
+                        <DragScroll className="p-relative ov-hidden dragscroll" height={'100%'} width={'100vw'}>
+                           <Buttons produtos={this.produtos} click={this.setProduto} cart={this.AbrirCarrinho} />
+                           <div className="loja-bg"></div>
+                        </DragScroll>
+               <div id="Modal" class="d-none"></div>
+               <FloatingButtons click={this.ListaDeProdutos} />
+               <ToastContainer bodyClassName="toastr-produto" progressClassName="toastr-produto-progress" />
             </div>
-            <div id="Modal" class="d-none"></div>
-            <FloatingButtons click={this.ListaDeProdutos} />
-         </div>
       );
    }
 }
