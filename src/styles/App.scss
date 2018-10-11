@@ -12,6 +12,8 @@
 @import "components/buttons/index.scss";
 @import "components/counter/index.scss";
 @import "components/carrinho/index.scss";
+@import "components/toastr/index.scss";
+@import "components/dragscroll/index.scss";
 
 // Views
 @import "views/tutorial/index.scss";
@@ -21,4 +23,3 @@
 
 // Media Queries
 @import "media_queries/index.scss";
-@import "media_queries/temp.scss";
