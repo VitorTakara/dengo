@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 
-const Loading = () => <div>Loading...</div>;
+const Loading = () => <div></div>;
 
 const sidebar = Loadable({
   loader: () => import('./routes/sidebar/index.js'),
@@ -29,10 +29,10 @@ const Loja = Loadable({
 const Routes = () => (
    <Router>
       <Switch>
-         <Route exact path="/" component={Tutorial}/>
-         <Route path="/sidebar" component={sidebar} />
-         <Route path="/carrinho" component={carrinho} />
-         <Route path="/Loja" component={Loja} />
+         <Route exact path={"/"} component={Tutorial}/>
+         <Route exact path={"/sidebar"} component={sidebar} />
+         <Route exact path={"/carrinho"} component={carrinho} />
+         <Route exact path={"/Loja"} component={Loja} />
       </Switch>
    </Router>
 );
