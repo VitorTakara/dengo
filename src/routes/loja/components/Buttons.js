@@ -43,7 +43,7 @@ class Buttons extends React.Component {
 
     render() {
         return (
-            <div>
+             <div>
                 <div id="Produtos"></div>
                 <div className="floating-buttons top bg-warning">
                     <div className="buttons-right">
