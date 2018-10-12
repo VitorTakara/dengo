@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/bg_telasiniciais.7c7ce38f.jpg"
   },
   {
-    "revision": "0c74f55bd962b4a13f19",
-    "url": "/static/js/main.0c74f55b.chunk.js"
+    "revision": "609aebbb113bdb7981a1",
+    "url": "/static/js/main.609aebbb.chunk.js"
   },
   {
     "revision": "bf2b3b68ef549d261fb1",
@@ -64,8 +64,8 @@ self.__precacheManifest = [
     "url": "/static/media/logo_dengo.1743fd21.png"
   },
   {
-    "revision": "0c74f55bd962b4a13f19",
-    "url": "/static/css/main.e351bda4.chunk.css"
+    "revision": "609aebbb113bdb7981a1",
+    "url": "/static/css/main.41ee0b98.chunk.css"
   },
   {
     "revision": "aaf986ce1efedc2b87c8",
@@ -80,7 +80,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.35a69af3.chunk.css"
   },
   {
-    "revision": "60623a96fe9201bba0a61a67e265c48b",
+    "revision": "e10774a2f14f10976b123444f76d71ce",
     "url": "/index.html"
   }
 ];
