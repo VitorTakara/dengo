@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/static/media/bg_telasiniciais.7c7ce38f.jpg"
   },
   {
-    "revision": "b0fb92c204c7f5cf18d2",
-    "url": "/static/js/main.b0fb92c2.chunk.js"
+    "revision": "20192a56e40497cce164",
+    "url": "/static/js/main.20192a56.chunk.js"
   },
   {
     "revision": "6705ce41cba8279e4a6b",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/static/js/5.e76cede8.chunk.js"
   },
   {
-    "revision": "3137aae878bbe97e5484",
-    "url": "/static/js/6.3137aae8.chunk.js"
+    "revision": "53cf9182b2caead2daa1",
+    "url": "/static/js/6.53cf9182.chunk.js"
   },
   {
     "revision": "6b2c8cf80ce84ee32f9db50cc89aaa3b",
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/static/js/9.93eea51c.chunk.js"
   },
   {
-    "revision": "c44ac9f3356565b00ddb",
-    "url": "/static/js/runtime~main.c44ac9f3.js"
+    "revision": "f68f2ecba51ca5a3b0d4",
+    "url": "/static/js/runtime~main.f68f2ecb.js"
   },
   {
-    "revision": "b0fb92c204c7f5cf18d2",
-    "url": "/static/css/main.bd7c3bd2.chunk.css"
+    "revision": "20192a56e40497cce164",
+    "url": "/static/css/main.af18744d.chunk.css"
   },
   {
     "revision": "93eea51ca519e454e5cc",
@@ -84,7 +84,7 @@ self.__precacheManifest = [
     "url": "/static/css/1.d48ec46f.chunk.css"
   },
   {
-    "revision": "0d4a53d5ad222154a8692777ebb16d42",
+    "revision": "c3cc96314cfc7bbccb20f3e08248bea1",
     "url": "/index.html"
   }
 ];
