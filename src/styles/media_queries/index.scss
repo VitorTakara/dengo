@@ -23,6 +23,23 @@
 }
 
 // Extra Small Devices
+@media screen and (max-width: 450px){
+   .floating-buttons {
+      &.bottom {
+          .buttons-right {
+              bottom: 46px;
+          }
+          .buttons-left {
+              bottom: 46px;
+          }
+      }
+   }
+}
+
+
+
+
+// Extra Small Devices
 @media screen and (max-width: 370px){
    .buttons-left, .buttons-right{
       font-size: 2rem;
