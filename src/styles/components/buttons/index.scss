@@ -1,22 +1,21 @@
-.button{
-      &-primary{
-      background-color: $primary-color;
-      border: 1px solid $primary-color;
-      border-radius: 0;
-      text-transform: uppercase;
-      padding: 10px 20px;
-      color: white!important;
-      transition: background-color .2s;
-      cursor: pointer;
+.button {
+    &-primary {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        border-radius: 0;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        color: white!important;
+        transition: background-color 0.2s;
+        cursor: pointer;
+        &:hover {
+            background-color: #38383800;
+            color: $primary-color!important;
+        }
+    }
 
-      &:hover{
-         background-color: #38383800;
-         color: $primary-color!important;
-      }
-   }
-
-   &-arrow svg{
-      position: relative;
-      font-size: 30px;
-   }
+    &-arrow svg {
+        position: relative;
+        font-size: 30px;
+    }
 }

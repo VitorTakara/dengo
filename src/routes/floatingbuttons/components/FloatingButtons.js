@@ -33,7 +33,7 @@ class Page extends React.Component {
             <div className="floating-buttons bottom">
                 <div className="buttons-left">
                     <span><FontAwesomeIcon icon={faQuestionCircle}/></span>
-                    <span href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen} /></span>
+                    <span href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen}/></span>
                 </div>
                 <div className="buttons-right">
                     <span>PT</span>

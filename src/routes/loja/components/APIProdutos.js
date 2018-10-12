@@ -1,29 +1,31 @@
 import React from 'react';
 
 class Lista extends React.Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         produtos: null
-       };
-   }
+    constructor(props) {
+        super(props);
+        this.state = {
+            produtos: null
+        };
+    }
 
-   componentDidMount() {
-      fetch("https://api.myjson.com/bins/19l4t8")
-      .then(res => res.json())
-      .then(
-        (result) => {
-           this.props.getProduto(result.items);
-          this.setState({
-            produtos: result.items
-          });
-        },
-        (error) => {console.log(error)});
-      
-   }
-   render() {
-      return (<code className="d-none"></code>);
-   }
+    componentDidMount() {
+        fetch("https://api.myjson.com/bins/19l4t8")
+            .then(res => res.json())
+            .then((result) => {
+                this
+                    .props
+                    .getProduto(result.items);
+                this.setState({produtos: result.items});
+            }, (error) => {
+                console.log(error)
+            });
+
+    }
+    render() {
+        return (
+            <code className="d-none"></code>
+        );
+    }
 }
 
 export default Lista;
