@@ -18,7 +18,11 @@
     }
 
     #Passos {
-        margin: 2rem 0 !important;
+        margin: 0.7rem 0 !important;
+    }
+
+    #root{
+       align-items: flex-start;
     }
 }
 
@@ -36,7 +40,7 @@
     }
 
    #Passos {
-      height: 45vh;
+      height: 40vh;
    }
 
     .carrinho-card-finalizar {

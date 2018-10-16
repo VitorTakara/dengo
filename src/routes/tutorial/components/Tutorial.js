@@ -62,13 +62,13 @@ class Page extends React.Component {
 
     render() {
         return (
-            <div className="w-100 h-100 p-4">
+            <div className="w-100 h-100 p-2">
                 <div className="tutorial">
                     <div
                         className="d-flex justify-content-center flex-column tutorial-content align-items-center">
                         <img className="top-logo-img" src={logo}/>
                         <div className="align-middle text-center text-white">
-                            <div id="Passos" className="m-5">
+                            <div id="Passos" className="m-3">
                                 <Passo0/>
                             </div>
                             <div class="d-flex justify-content-center align-items-center">
