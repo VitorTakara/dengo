@@ -9,7 +9,7 @@ class Lista extends React.Component {
     }
 
     componentDidMount() {
-        fetch("https://api.myjson.com/bins/19l4t8")
+        fetch("https://api.myjson.com/bins/12m1jc")
             .then(res => res.json())
             .then((result) => {
                 this

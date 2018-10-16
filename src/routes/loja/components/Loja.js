@@ -39,8 +39,8 @@ class Loja extends React.Component {
             lojabg.style.width = (xy * windowHeight) + 'px';
             let produtos = document.querySelectorAll("#Produtos a")
             produtos.forEach(prod => {
-                prod.style.left = (lojabg.offsetWidth * prod.dataset.x / 100) + 'px';
-                prod.style.top = (lojabg.offsetHeight * prod.dataset.y / 100) + 'px';
+                prod.style.left = (lojabg.offsetWidth * prod.dataset.y / 100) + 'px';
+                prod.style.top = (lojabg.offsetHeight * prod.dataset.x / 100) + 'px';
             });
         }, 100);
     }
