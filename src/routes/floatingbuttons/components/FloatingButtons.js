@@ -1,7 +1,9 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faQuestionCircle, faBookOpen, faComments, faVolumeUp, faVolumeDown} from '@fortawesome/free-solid-svg-icons'
+import {faBookOpen, faComments, faVolumeUp, faVolumeDown} from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
+import questionCircle from './../../../images/question-circle.svg';
+import chat from './../../../images/chat.svg';
 
 const BtnVolumeUp = () => (<FontAwesomeIcon icon={faVolumeUp}/>);
 
@@ -32,12 +34,12 @@ class Page extends React.Component {
         return (
             <div className="floating-buttons bottom">
                 <div className="buttons-left">
-                    <span><FontAwesomeIcon icon={faQuestionCircle}/></span>
+                    <span><img src={questionCircle} className="icone"/></span>
                     <span href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen}/></span>
                 </div>
                 <div className="buttons-right">
                     <span>PT</span>
-                    <span><FontAwesomeIcon icon={faComments}/></span>
+                    <span><img src={chat} className="icone"/></span>
                     <span onClick={this.BtnMute} id="btnMute"><BtnVolumeDown/></span>
                 </div>
             </div>
