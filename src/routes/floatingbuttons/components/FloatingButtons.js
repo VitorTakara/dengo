@@ -4,7 +4,7 @@ import questionCircle from './../../../images/question-circle.svg';
 import chat from './../../../images/chat-icon.svg';
 import book from './../../../images/open-book.svg';
 import volUp from './../../../images/volUp.svg';
-import volDown from './../../../images/volUp.svg';
+import volDown from './../../../images/volDown.svg';
 
 const BtnVolumeUp = () => (<img src={volUp} className="icone"/>);
 
