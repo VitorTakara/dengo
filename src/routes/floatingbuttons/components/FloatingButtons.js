@@ -6,9 +6,9 @@ import book from './../../../images/open-book.svg';
 import volUp from './../../../images/volUp.svg';
 import volDown from './../../../images/volDown.svg';
 
-const BtnVolumeUp = () => (<img src={volUp} className="icone"/>);
+const BtnVolumeUp = () => (<img src={volDown} className="icone"/>);
 
-const BtnVolumeDown = () => (<img src={volDown} className="icone"/>);
+const BtnVolumeDown = () => (<img src={volUp} className="icone"/>);
 
 class Page extends React.Component {
     constructor(props) {
