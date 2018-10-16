@@ -1,6 +1,8 @@
 import React from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingBasket, faShoppingCart} from '@fortawesome/free-solid-svg-icons'
+import logo from './../../../images/logo_dengo.svg';
+import shoppingBasket from './../../../images/shopping-basket.svg';
 import ReactDOM from 'react-dom'
 
 class Buttons extends React.Component {
@@ -30,7 +32,7 @@ class Buttons extends React.Component {
                     top: item.xy.top,
                     left: item.xy.left
                 }}>
-                    <FontAwesomeIcon icon={faShoppingBasket}/>
+                    <img src={shoppingBasket} className="icone"/>
                 </a>
             );
         }), document.getElementById("Produtos"));
@@ -46,6 +48,9 @@ class Buttons extends React.Component {
              <div>
                 <div id="Produtos"></div>
                 <div className="floating-buttons top bg-warning">
+                    <div className="buttons-left">
+                        <span><img className="logo" src={logo} /></span>
+                    </div>
                     <div className="buttons-right">
                         <span><FontAwesomeIcon icon={faShoppingCart} onClick={() => this.props.cart()}/></span>
                     </div>

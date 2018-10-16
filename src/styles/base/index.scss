@@ -90,10 +90,11 @@ body {
 
 }
 
-div#btnProximo {
+div.btn-tutorial {
     font-size: 30px;
     margin: 10px;
     cursor: pointer;
+    display: inline;
 }
 
 .btn-fechar {
@@ -146,6 +147,9 @@ div#btnProximo {
     position: fixed;
     left: 0;
     cursor: pointer;
+    .logo{
+       height: 1.5em;
+    }
     &.top {
         .buttons-right {
             top: 0;
@@ -195,6 +199,12 @@ div#btnProximo {
     }
 }
 
+#Passos{
+   overflow-x: hidden;
+   overflow-y: auto;
+   height: 30vh;
+}
+
 #Modal {
     z-index: 3;
     position: fixed;
@@ -214,7 +224,7 @@ div#btnProximo {
 
 .modal-container {
     height: calc(100% - 6rem);
-    max-width: 800px;
+    max-width: 1000px;
     margin: 3rem auto;
 }
 
