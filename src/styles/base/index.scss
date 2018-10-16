@@ -26,10 +26,13 @@ body {
     height: auto;
 }
 
-// .black-screen {
-//     width: 100%;
-//     height: 100%;
-// }
+.icone{
+   width: 45px;
+}
+
+.icone-basket{
+   width: 55px;
+}
 
 .top {
     &-logo {
@@ -130,8 +133,8 @@ div.btn-tutorial {
         transition: 0.3s;
     }
     &:hover::after {
-        top: -14px;
-        left: -24px;
+      top: -9px;
+      left: -23px;
         height: 100px;
         width: 100px;
         opacity: 1;
@@ -171,7 +174,7 @@ div.btn-tutorial {
         span {
             color: #ffffff;
             text-decoration: none;
-            margin-right: 20px;
+            margin-right: 10px;
             transition: color 0.2s;
             &:hover {
                 color: #aeaeae;
@@ -180,13 +183,13 @@ div.btn-tutorial {
         position: absolute;
         margin: 15px 30px;
         left: 0;
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
     .buttons-right {
         span {
             color: #ffffff;
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 10px;
             transition: color 0.2s;
             &:hover {
                 color: #aeaeae;
@@ -195,7 +198,7 @@ div.btn-tutorial {
         position: absolute;
         margin: 15px 30px;
         right: 0;
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
 }
 

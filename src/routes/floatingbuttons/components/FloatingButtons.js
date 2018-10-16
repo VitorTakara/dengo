@@ -1,13 +1,14 @@
 import React from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBookOpen, faComments, faVolumeUp, faVolumeDown} from '@fortawesome/free-solid-svg-icons'
 import ReactDOM from 'react-dom'
 import questionCircle from './../../../images/question-circle.svg';
-import chat from './../../../images/chat.svg';
+import chat from './../../../images/chat-icon.svg';
+import book from './../../../images/open-book.svg';
+import volUp from './../../../images/volUp.svg';
+import volDown from './../../../images/volUp.svg';
 
-const BtnVolumeUp = () => (<FontAwesomeIcon icon={faVolumeUp}/>);
+const BtnVolumeUp = () => (<img src={volUp} className="icone"/>);
 
-const BtnVolumeDown = () => (<FontAwesomeIcon icon={faVolumeDown}/>);
+const BtnVolumeDown = () => (<img src={volDown} className="icone"/>);
 
 class Page extends React.Component {
     constructor(props) {
@@ -35,7 +36,7 @@ class Page extends React.Component {
             <div className="floating-buttons bottom">
                 <div className="buttons-left">
                     <span><img src={questionCircle} className="icone"/></span>
-                    <span href="#" onClick={() => this.props.click()}><FontAwesomeIcon icon={faBookOpen}/></span>
+                    <span href="#" onClick={() => this.props.click()}><img src={book} className="icone"/></span>
                 </div>
                 <div className="buttons-right">
                     <span>PT</span>
