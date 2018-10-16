@@ -71,9 +71,11 @@ class Page extends React.Component {
                             <div id="Passos" className="m-5">
                                 <Passo0/>
                             </div>
-                            <div id="btnAnterior" className="btn-tutorial d-none" onClick={(e) => this.Anterior(e)}><FontAwesomeIcon icon={faArrowLeft}/></div>
-                            <div id="btnProximo" className="btn-tutorial" onClick={(e) => this.Proximo(e)}><FontAwesomeIcon icon={faArrowRight}/></div>
-                            <div id="btnFechar" className="d-none"><BtnFechar/></div>
+                            <div class="d-flex justify-content-center align-items-center">
+                              <div id="btnAnterior" className="btn-tutorial d-none" onClick={(e) => this.Anterior(e)}><FontAwesomeIcon icon={faArrowLeft}/></div>
+                              <div id="btnProximo" className="btn-tutorial" onClick={(e) => this.Proximo(e)}><FontAwesomeIcon icon={faArrowRight}/></div>
+                              <div id="btnFechar" className="d-none"><BtnFechar/></div>
+                            </div>
                         </div>
                     </div>
                 </div>
