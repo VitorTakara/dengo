@@ -11,7 +11,7 @@ import bg_bemvindo from './../../../images/bemvindo.jpg';
 import bg_telasiniciais from './../../../images/bg_telasiniciais.jpg';
 import logo from './../../../images/logo_dengo.svg';
 
-var i = 1;
+var i = 0;
 
 const BtnFechar = () => (
     <a href="/Loja" className="btn btn-outline-light btn-fechar">Fechar</a>
