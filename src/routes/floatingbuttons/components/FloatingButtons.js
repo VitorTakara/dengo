@@ -5,6 +5,7 @@ import chat from './../../../images/chat-icon.svg';
 import book from './../../../images/open-book.svg';
 import volUp from './../../../images/volUp.svg';
 import volDown from './../../../images/volDown.svg';
+import ReactTooltip from 'react-tooltip';
 
 const BtnVolumeUp = () => (<img src={volDown} className="icone"/>);
 
@@ -34,13 +35,14 @@ class Page extends React.Component {
     render() {
         return (
             <div className="floating-buttons bottom">
+               <ReactTooltip />
                 <div className="buttons-left">
-                    <span href="#" onClick={() => this.props.ajuda()}><img src={questionCircle} className="icone"/></span>
-                    <span href="#" onClick={() => this.props.click()}><img src={book} className="icone"/></span>
+                    <span data-tip="Ajuda" href="#" onClick={() => this.props.ajuda()}><img src={questionCircle} className="icone"/></span>
+                    <span data-tip="Produtos" href="#" onClick={() => this.props.click()}><img src={book} className="icone"/></span>
                 </div>
                 <div className="buttons-right">
-                    <span><img src={chat} className="icone"/></span>
-                    <span onClick={this.BtnMute} id="btnMute"><BtnVolumeDown/></span>
+                    <span data-tip="Chat"><img src={chat} className="icone"/></span>
+                    <span data-tip="Som" onClick={this.BtnMute} id="btnMute"><BtnVolumeDown/></span>
                 </div>
             </div>
         );
