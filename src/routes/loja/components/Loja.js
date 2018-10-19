@@ -6,6 +6,7 @@ import Lista from './APIProdutos.js'
 import FloatingButtons from './../../floatingbuttons/index.js'
 import Carrinho from './../../carrinho/components/carrinho.js'
 import ListaDeProdutos from './ListaDeProdutos.js'
+import Ajuda from './Ajuda.js'
 import DragScroll from 'react-dragscroll'
 import {ToastContainer, toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -55,7 +56,7 @@ class Loja extends React.Component {
         ReactDOM.render(
             <ListaDeProdutos
             produtos={this.state.produtos}
-            closeProdutos={this.CloseListaDeProdutos}
+            closeProdutos={this.CloseModal}
             addToCart={this.adicionarAoCarrinho}/>, modal)
         modal
             .classList
@@ -63,7 +64,18 @@ class Loja extends React.Component {
         // Aqui a gente chama o SideBar e coloca as infos do produto
     }
 
-    CloseListaDeProdutos = () => {
+    Ajuda = () => {
+        let modal = document.getElementById("Modal");
+        ReactDOM.unmountComponentAtNode(modal)
+        ReactDOM.render(
+            <Ajuda
+            closeAjuda={this.CloseModal}/>, modal)
+        modal
+            .classList
+            .remove("d-none");
+    }
+
+    CloseModal = () => {
         let modal = document.getElementById("Modal");
         ReactDOM.unmountComponentAtNode(modal)
         modal
@@ -77,7 +89,7 @@ class Loja extends React.Component {
             setTimeout(() => {
                 ReactDOM.unmountComponentAtNode(document.getElementById("ProdutoSideBar"))
             }, 300);
-        }
+      }
     
     setProduto = (p) => {
         this.closeSideBar();
@@ -142,7 +154,7 @@ class Loja extends React.Component {
                 <ToastContainer
                     bodyClassName="toastr-produto"
                     progressClassName="toastr-produto-progress"/>
-                <FloatingButtons click={this.ListaDeProdutos}/>
+                <FloatingButtons click={this.ListaDeProdutos} ajuda={this.Ajuda}/>
             </div>
         );
     }
