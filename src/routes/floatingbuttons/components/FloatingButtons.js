@@ -35,11 +35,10 @@ class Page extends React.Component {
         return (
             <div className="floating-buttons bottom">
                 <div className="buttons-left">
-                    <span><img src={questionCircle} className="icone"/></span>
+                    <span href="#" onClick={() => this.props.ajuda()}><img src={questionCircle} className="icone"/></span>
                     <span href="#" onClick={() => this.props.click()}><img src={book} className="icone"/></span>
                 </div>
                 <div className="buttons-right">
-                    <span>PT</span>
                     <span><img src={chat} className="icone"/></span>
                     <span onClick={this.BtnMute} id="btnMute"><BtnVolumeDown/></span>
                 </div>
