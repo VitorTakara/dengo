@@ -1,6 +1,7 @@
 import React from 'react';
 import {Animated} from "react-animated-css";
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import logo from './../../../images/logo_color_dengo.svg';
 
 class Ajuda extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Ajuda extends React.Component {
     render() {
         return (
             <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-                <div className="h-100 w-100 pos-fixed z-index-2">
+                <div className="h-100 w-100 pos-fixed z-index-2 modal-bg" onClick={() => this.props.closeAjuda()}>
                     <div className="modal-container">
                         <div
                             className="d-flex modal-content justify-content-center flex-column p-3 text-center text-black bg-light">
@@ -18,10 +19,10 @@ class Ajuda extends React.Component {
                                  href="#"
                                  className="sidebar-btn-close"
                                  onClick={() => this.props.closeAjuda()}>X</a>
-                              <div className="top-logo top-logo-color"></div>
-                              <div className="align-middle p-5 modal-items-container">
-                              <div className="text-center mb-5">
-                              <div className="">
+                                 <div><img src={logo} alt="Logo do Dengo" className="w-150px"/></div>
+                                 <div className="align-middle p-5 modal-items-container">
+                                 <div className="text-center mb-5">
+                                 <div className="">
                                     <h4>PRIMEIRA STREAM STORE DO BRASIL</h4>
                                     <p>A loja ao vivo Dengo nasceu com o objetivo de criar uma nova experiência
                                     de compras, mantendo o toque e a proximidade do contato humano ao

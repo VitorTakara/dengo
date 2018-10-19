@@ -1,285 +1,313 @@
-@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
 
-html, body {
-    height: 100vh;
+html,
+body {
+   height: 100vh;
 }
 
-#root{
-    min-height: 100%;
-    display: flex;
-    align-items: center;
+#root {
+   min-height: 100%;
+   display: flex;
+   align-items: center;
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    background-color: black;
-    background-image: url("./../images/bg_loja.jpg");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;
-    background-size: cover;
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   background-color: black;
+   background-image: url("./../images/bg_loja.jpg");
+   background-repeat: no-repeat;
+   background-position: center top;
+   background-attachment: fixed;
+   background-size: cover;
 }
 
 .top-logo-img {
-    width: 200px;
-    height: auto;
+   width: 200px;
+   height: auto;
 }
 
-.icone{
+.icone {
    width: 45px;
 }
 
-.icone-basket{
+.icone-basket {
    width: 55px;
 }
 
 .top {
-    &-logo {
-        height: 150px;
-        overflow: hidden;
-        margin: 20px 0;
-        background-image: url($logoUrl);
-        background-position: center top;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-        &-color {
-            background-image: url($logoColorUrl);
-        }
-        img {
-            max-width: 100%;
-            max-height: 100%;
-        }
-    }
+   &-logo {
+      height: 150px;
+      overflow: hidden;
+      margin: 20px 0;
+      background-image: url($logoUrl);
+      background-position: center top;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+
+      &-color {
+         background-image: url($logoColorUrl);
+      }
+
+      img {
+         max-width: 100%;
+         max-height: 100%;
+      }
+   }
 }
 
 .tutorial {
-    height: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    overflow-y: hidden;
-    overflow-x: hidden;
+   height: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
+   overflow-y: hidden;
+   overflow-x: hidden;
 }
 
 .tutorial-content {
-    height: 100%;
+   height: 100%;
 }
 
 .home {
-    height: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    &-logo {
-        height: 200px;
-        background-image: url($logoUrl);
-        background-position: center top;
-        background-size: auto 100%;
-        background-repeat: no-repeat;
-    }
+   height: 100%;
+   max-width: 1000px;
+   margin: 0 auto;
 
-    &-content {
-        height: 100%;
-    }
+   &-logo {
+      height: 200px;
+      background-image: url($logoUrl);
+      background-position: center top;
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+   }
+
+   &-content {
+      height: 100%;
+   }
 }
 
 .loja-bg {
-    width: 2394px;
-    height: 100vh;
-    background-image: url($bgLoja);
-    background-position: left top;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    overflow: hidden;
+   width: 2394px;
+   height: 100vh;
+   background-image: url($bgLoja);
+   background-position: left top;
+   background-repeat: no-repeat;
+   background-size: 100% 100%;
+   overflow: hidden;
 
 }
 
 div.btn-tutorial {
-    font-size: 30px;
-    margin: 0 25px;
-    cursor: pointer;
-    display: inline;
+   font-size: 30px;
+   margin: 0 25px;
+   cursor: pointer;
+   display: inline;
 }
 
 .btn-fechar {
-    text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 .btn-produto {
-    position: absolute;
-    font-size: 3em;
-    color: #fff;
-    &:hover {
-        color: white;
-    }
+   position: absolute;
+   font-size: 3em;
+   color: #fff;
 
-    &::after {
-        position: absolute;
-        content: '';
-        top: 35px;
-        left: 25px;
-        height: 0;
-        width: 0;
-        border-radius: 50%;
-        border: 4px dotted rgba(255, 255, 255, 0);
-        opacity: 0;
-        transition: 0.3s;
-    }
-    &:hover::after {
+   &:hover {
+      color: white;
+   }
+
+   &::after {
+      position: absolute;
+      content: '';
+      top: 35px;
+      left: 25px;
+      height: 0;
+      width: 0;
+      border-radius: 50%;
+      border: 4px dotted rgba(255, 255, 255, 0);
+      opacity: 0;
+      transition: 0.3s;
+   }
+
+   &:hover::after {
       top: -9px;
       left: -23px;
-        height: 100px;
-        width: 100px;
-        opacity: 1;
-        border: 7px dotted #fff;
-        -webkit-animation: spin 3s linear infinite;
-        -moz-animation: spin 3s linear infinite;
-        animation: spin 3s linear infinite;
-    }
+      height: 100px;
+      width: 100px;
+      opacity: 1;
+      border: 7px dotted #fff;
+      -webkit-animation: spin 3s linear infinite;
+      -moz-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+   }
 }
 
 .floating-buttons {
-    width: 100vw;
-    position: fixed;
-    left: 0;
-    cursor: pointer;
-    .logo{
-       height: 1.5em;
-       min-height: 90px;
-    }
-    &.top {
-        .buttons-right {
-            top: 0;
-        }
-        .buttons-left {
-            top: 0;
-        }
-    }
-    &.bottom {
-        .buttons-right {
-            bottom: 0;
-        }
-        .buttons-left {
-            bottom: 0;
-        }
-    }
+   width: 100vw;
+   position: fixed;
+   left: 0;
+   cursor: pointer;
 
-    .buttons-left {
-        span {
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 10px;
-            transition: color 0.2s;
-            &:hover {
-                color: #aeaeae;
-            }
-        }
-        position: absolute;
-        margin: 15px 30px;
-        left: 0;
-        font-size: 1.5em;
-    }
-    .buttons-right {
-        span {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 10px;
-            transition: color 0.2s;
-            &:hover {
-                color: #aeaeae;
-            }
-        }
-        position: absolute;
-        margin: 15px 30px;
-        right: 0;
-        font-size: 1.5em;
-    }
+   .logo {
+      height: 1.5em;
+      min-height: 90px;
+   }
+
+   &.top {
+      .buttons-right {
+         top: 0;
+      }
+
+      .buttons-left {
+         top: 0;
+      }
+   }
+
+   &.bottom {
+      .buttons-right {
+         bottom: 0;
+      }
+
+      .buttons-left {
+         bottom: 0;
+      }
+   }
+
+   .buttons-left {
+      span {
+         color: #ffffff;
+         text-decoration: none;
+         margin-right: 10px;
+         transition: color 0.2s;
+
+         &:hover {
+            color: #aeaeae;
+         }
+      }
+
+      position: absolute;
+      margin: 15px 30px;
+      left: 0;
+      font-size: 1.5em;
+   }
+
+   .buttons-right {
+      span {
+         color: #ffffff;
+         text-decoration: none;
+         margin-left: 10px;
+         transition: color 0.2s;
+
+         &:hover {
+            color: #aeaeae;
+         }
+      }
+
+      position: absolute;
+      margin: 15px 30px;
+      right: 0;
+      font-size: 1.5em;
+   }
 }
 
-#Passos{
+#Passos {
    overflow-x: hidden;
    overflow-y: auto;
    height: 30vh;
 }
 
 #Modal {
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100vw;
+   z-index: 3;
+   position: fixed;
+   top: 0;
+   height: 100%;
+   width: 100vw;
 }
 
 #ListaDeProdutos {
-    margin: 0 auto;
-    padding: 25px 100px;
-    width: 100%;
-    hr {
-        width: 65%;
-    }
+   margin: 0 auto;
+   padding: 25px 100px;
+   width: 100%;
+
+   hr {
+      width: 65%;
+   }
 }
 
-.modal-container {
-    height: calc(100% - 6rem);
-    max-width: 900px;
-    margin: 3rem auto;
+
+.modal {
+   &-container {
+      height: calc(100% - 6rem);
+      max-width: 900px;
+      margin: 3rem auto;
+   }
+
+   &-content {
+      height: 100%;
+   }
+
+   &-items-container {
+      overflow: auto;
+   }
+
+   &-bg {
+      background-color: rgba(0, 0, 0, 0.3);
+   }
 }
 
-.modal-content {
-    height: 100%;
-}
-
-.modal-items-container {
-    overflow: auto;
-}
 .sidebar-btn-close {
-    font-size: 30px;
-    position: absolute;
-    top: 15px;
-    right: 16px!important;
-    color: $primary-color;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.5s;
-    text-decoration: none;
-    &:hover {
-        background: rgb(218, 218, 218);
-        text-decoration: none;
-        color: $primary-color;
-    }
+   font-size: 30px;
+   position: absolute;
+   top: 15px;
+   right: 16px !important;
+   color: $primary-color;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   transition: 0.5s;
+   text-decoration: none;
+
+   &:hover {
+      background: rgb(218, 218, 218);
+      text-decoration: none;
+      color: $primary-color;
+   }
 }
 
 .App {
-    text-align: center;
+   text-align: center;
 }
 
 .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 40vmin;
+   animation: App-logo-spin infinite 20s linear;
+   height: 40vmin;
 }
 
 .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+   background-color: #282c34;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-size: calc(10px + 2vmin);
+   color: white;
 }
 
 .App-link {
-    color: #61dafb;
+   color: #61dafb;
 }
+
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+   from {
+      transform: rotate(0deg);
+   }
+
+   to {
+      transform: rotate(360deg);
+   }
 }

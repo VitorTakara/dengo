@@ -1,6 +1,7 @@
 import React from 'react';
 import {Animated} from "react-animated-css";
 import ReactDOM from 'react-dom'
+import logo from './../../../images/logo_color_dengo.svg';
 
 class Prod extends React.Component {
     constructor(props) {
@@ -41,7 +42,7 @@ class Prod extends React.Component {
     render() {
         return (
             <Animated animationIn="fadeIn" animationOut="fadeOut" isVisible={true}>
-                <div className="h-100 w-100 pos-fixed z-index-2">
+                <div className="h-100 w-100 pos-fixed z-index-2 modal-bg" onClick={() => this.props.closeProdutos()}>
                     <div className="modal-container">
                         <div
                             className="d-flex modal-content justify-content-center flex-column p-3 text-center text-black bg-light">
@@ -49,7 +50,7 @@ class Prod extends React.Component {
                                 href="#"
                                 className="sidebar-btn-close"
                                 onClick={() => this.props.closeProdutos()}>X</a>
-                            <div className="top-logo top-logo-color"></div>
+                            <div><img src={logo} alt="Logo do Dengo" className="w-150px"/></div>
                             <div id="ListaDeProdutos" className="align-middle p-5 modal-items-container"></div>
                         </div>
                     </div>
