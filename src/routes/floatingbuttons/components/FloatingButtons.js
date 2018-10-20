@@ -35,7 +35,7 @@ class Page extends React.Component {
     render() {
         return (
             <div className="floating-buttons bottom">
-               <ReactTooltip />
+               <ReactTooltip effect="solid" className="toolTip" />
                 <div className="buttons-left">
                     <span data-tip="Ajuda" href="#" onClick={() => this.props.ajuda()}><img src={questionCircle} className="icone"/></span>
                     <span data-tip="Produtos" href="#" onClick={() => this.props.click()}><img src={book} className="icone"/></span>
