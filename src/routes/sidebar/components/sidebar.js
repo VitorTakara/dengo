@@ -41,7 +41,7 @@ class LeftSideModal extends React.Component {
                 onSetOpen={this.onSetSidebarOpen}
                 styles={{
                 sidebar: {
-                    background: "#ffffffc2",
+                    background: "#ffffff",
                     position: "fixed"
                 }
             }}></Sidebar>
