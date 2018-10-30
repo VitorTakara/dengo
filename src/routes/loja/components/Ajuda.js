@@ -41,7 +41,8 @@ class Ajuda extends React.Component {
                                     obter mais informações, e/ou adicioná-lo em seu carrinho de compras.</p>
 
                                     <h4 class="mt-4">HORÁRIO DE FUNCIONAMENTO</h4>
-                                    <p>A loja online de Dengo estará aberta entre os dias xxx e xxx, das xxh às xxh.</p>
+                                    <p>Nossa loja ao vivo funciona das 10:30h às 21:00h de segunda à sábado. Mas não se preocupe,
+                                       você ainda pode conhecer e comprar nossos deliciosos produtos em nossa loja online 24h, clica aqui ó: <a href="http://dengo.com" target="_blank">dengo.com</a></p>
 
                                     <h4 class="mt-4">PAGAMENTO E ENVIO DOS PRODUTOS</h4>
                                     <p>Você pode comprar os chocolates Dengo usando o PayPal, cartão de
