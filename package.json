@@ -21,7 +21,8 @@
     "react-sidebar": "^3.0.2",
     "react-toastify": "^4.4.0",
     "react-tooltip": "^3.9.0",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^6.5.0",
+    "wowza-player-js-api": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
