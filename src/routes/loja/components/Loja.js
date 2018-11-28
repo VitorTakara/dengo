@@ -48,6 +48,36 @@ class Loja extends React.Component {
 
     componentDidMount = () => {
         window.addEventListener("resize", this.updateDimensions);
+
+
+        // Carrega Wowzaplayer
+        const script = document.createElement("script");
+        script.src = "http://player.wowza.com/player/latest/wowzaplayer.min.js";
+        document.body.appendChild(script);
+        
+        // Inicializa o serviço de STREAM
+        eval(`
+        let promise = setInterval(() => {
+            if(WowzaPlayer != undefined){
+                WowzaPlayer.create('loja-bg', {
+                        "license":"PLAY1-dBHE7-TfW9B-w44eM-6tMef-ncU6k",
+                        "title":"Dengo Streaming",
+                        "description":"Dengo Shop Stream",
+                        "sourceURL":"http%3A%2F%2F138.201.110.151%3A1935%2Flive%2Ftest%2Fplaylist.m3u8",
+                        "autoPlay":true,
+                        "volume":"75",
+                        "mute":false,
+                        "loop":true,
+                        "audioOnly":false,
+                        "uiShowQuickRewind":true,
+                        "uiQuickRewindSeconds":"30"
+                    });
+
+                    clearInterval(promise);
+                }
+            }, 500);
+        `);       
+        
     }
 
     ListaDeProdutos = () => {
@@ -139,14 +169,14 @@ class Loja extends React.Component {
 
     render() {
         return (
-            <div id="abc" class='h100'>
+            <div id="abc" className='h100'>
                 <Lista getProduto={this.carregarProdutos}/>
                 <div id="ProdutoSideBar"></div>
                 <DragScroll
                     className="p-relative ov-hidden h100 dragscroll"
                     height={'100%'}
                     width={'100vw'}>
-                    <div className="loja-bg">
+                    <div className="loja-bg" id="loja-bg">
                         <div id="btnProdutos"></div>
                     </div>
                 </DragScroll>

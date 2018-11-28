@@ -22,6 +22,17 @@ body {
    background-size: cover;
 }
 
+
+#loja-bg-MediaController{
+   .loja-bg-Play,
+   .loja-bg-Replay,
+   .loja-bg-VolumeOn,
+   .loja-bg-FullScreen{
+      display: none!important;
+   }
+}
+
+
 .top-logo-img {
    width: 130px;
    height: auto;
