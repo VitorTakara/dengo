@@ -32,18 +32,20 @@ class Loja extends React.Component {
             let proporcaoVideo = 1920 / 1080;
             let proporcaoJanela = window.innerWidth / window.innerHeight;
 
-            let windowHeight = document
-                .querySelector("#abc")
-                .offsetHeight
+            let windowHeight = window.innerHeight
 
-            if(proporcaoJanela > proporcaoVideo){
-                lojabg.style.height = windowHeight
+            let windowWidth = window.innerWidth
+
+            if(proporcaoJanela < proporcaoVideo){
+                lojabg.style.height = windowHeight + 'px';
                 lojabg.style.width = (proporcaoVideo * windowHeight) + 'px';
-            }
-
-            if(proporcaoJanela > proporcaoVideo){
-                lojabg.style.width = window.innerWidth
-                lojabg.style.height = (window.innerWidth / proporcaoVideo) + 'px';
+                lojabg.style.overflowX = 'auto';
+                lojabg.style.overflowY = 'hidden';
+            } else if(proporcaoJanela > proporcaoVideo){
+                lojabg.style.width = windowWidth + 'px';
+                lojabg.style.height = (windowWidth / proporcaoVideo) + 'px';
+                lojabg.style.overflowX = 'auto';
+                lojabg.style.overflowY = 'hidden';
             }
 
             let produtos = document.querySelectorAll("#Produtos a")
@@ -57,6 +59,36 @@ class Loja extends React.Component {
     componentDidMount = () => {
         window.addEventListener("resize", this.updateDimensions);
         this.updateDimensions(document.getElementById("btnProdutos"))
+
+
+                //Carrega Wowzaplayer 
+                const script = document.createElement("script");
+                script.src = "https://player.vimeo.com/api/player.js";
+                document.body.appendChild(script);
+                
+        
+        
+                //Inicializa o serviço de STREAM 
+                eval(` let promise = setInterval(() => {
+                                if(Vimeo != undefined){
+                                    
+                                    var options = {
+                                        url: 'https://player.vimeo.com/video/275642423?autoplay=1&loop=1&mute=1',
+                                    playsinline: true
+                                    };
+                                
+                                    var player = new Vimeo.Player('stream', options);
+                                
+                                    player.setVolume(1);
+            
+                                    let playbtn = document.querySelector("#playButton");
+                                    playbtn.addEventListener("click", function(){
+                                            player.play();
+                                            document.querySelector(".termos").classList.add("fadeOut");
+                                    })
+                                    clearInterval(promise);
+                                }
+                            }, 500); `);
 
         // // Carrega Wowzaplayer
         // const script = document.createElement("script");
@@ -178,14 +210,22 @@ class Loja extends React.Component {
     render() {
         return (
             <div id="abc" className='h100'>
+                <div className="termos animated">
+                    <div className="termos-modal">
+                        <div className="termos-modal-texto">Termos e Condições</div>
+                        <div className="termos-modal-button">
+                            <button type="button" className="btn btn-outline-light btn-fechar" id="playButton">EU ACEITO. VAMOS INICIAR!</button>
+                        </div>
+                    </div>
+                </div>
                 <Lista getProduto={this.carregarProdutos}/>
                 <div id="ProdutoSideBar"></div>
                 <DragScroll
                     className="p-relative ov-hidden h100 dragscroll"
-                    height={'100%'}
+                    height={'100vh'}
                     width={'100vw'}>
                     <div className="loja-bg">
-                        <iframe src="https://player.vimeo.com/video/275642423"></iframe>
+                    <div className="loja-bg" id="stream"></div>
                         <div></div>
                     </div>
 

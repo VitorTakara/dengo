@@ -340,13 +340,39 @@ div.btn-tutorial {
    }
 }
 
+.termos{
+   display: flex;
+   align-items: center;
+    justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: #00000091;
+   z-index: 999;
 
+   &-modal{
+      height: 100vh;
+      min-width: 100vw;
+      overflow: auto;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-flow: column;
 
+      &-texto{
+         height: 70vh;
+         margin-top: 10vh;
+      }
 
-
-
-
-
+      &-button{
+         height: 10vh;
+    margin-bottom: 10vh;
+      }
+   }
+}
 
 
 .tutorial2{
