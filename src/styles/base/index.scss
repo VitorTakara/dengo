@@ -350,18 +350,30 @@ div.btn-tutorial {
 
 
 .tutorial2{
-   header,article{
+   .logo, .btns{
       display: flex;
       height: 25vh;
       justify-content: center;
       align-items: center;
+      color: white;
    }
 
-   aside{
+   .btns{
+      height: 15vh;
+      margin-bottom: 10vh;
+   }
+
+   .passos{
       display: flex;
       height: 50vh;
       justify-content: center;
       align-items: center;
+      overflow-y: auto;
+      overflow-x: hidden;
 
+   }
+
+   #Passos{
+      max-width: 600px;
    }
 }

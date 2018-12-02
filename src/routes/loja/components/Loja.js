@@ -25,19 +25,27 @@ class Loja extends React.Component {
             .updateDimensions
             .bind(this);
     }
-
     updateDimensions = (div) => {
         setTimeout(() => {
             let lojabg = document.querySelector(".loja-bg")
 
-            let xy = 1433 / 806;
+            let proporcaoVideo = 1920 / 1080;
+            let proporcaoJanela = window.innerWidth / window.innerHeight;
 
             let windowHeight = document
                 .querySelector("#abc")
                 .offsetHeight
 
-            lojabg.style.height = windowHeight
-            lojabg.style.width = (xy * windowHeight) + 'px';
+            if(proporcaoJanela > proporcaoVideo){
+                lojabg.style.height = windowHeight
+                lojabg.style.width = (proporcaoVideo * windowHeight) + 'px';
+            }
+
+            if(proporcaoJanela > proporcaoVideo){
+                lojabg.style.width = window.innerWidth
+                lojabg.style.height = (window.innerWidth / proporcaoVideo) + 'px';
+            }
+
             let produtos = document.querySelectorAll("#Produtos a")
             produtos.forEach(prod => {
                 prod.style.left = (lojabg.offsetWidth * prod.dataset.y / 100) + 'px';
@@ -48,7 +56,7 @@ class Loja extends React.Component {
 
     componentDidMount = () => {
         window.addEventListener("resize", this.updateDimensions);
-
+        this.updateDimensions(document.getElementById("btnProdutos"))
 
         // // Carrega Wowzaplayer
         // const script = document.createElement("script");

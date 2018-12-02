@@ -14,7 +14,7 @@ import logo from './../../../images/logo_dengo.svg';
 var i = 0;
 
 const BtnFechar = () => (
-    <a href="/Loja" className="btn btn-outline-light btn-fechar">Fechar</a>
+    <a href="/Loja" className="btn btn-outline-light btn-fechar">ENTRAR</a>
 );
 
 document
@@ -55,6 +55,7 @@ class Page extends React.Component {
       if (i === 3) {
          ReactDOM.render(
             <Passo3/>, document.getElementById("Passos"));
+            document.getElementById("btnAnterior").classList.add("d-none")
             document.getElementById("btnProximo").classList.add("d-none")
             document.getElementById("btnFechar").classList.remove("d-none")
       }
@@ -63,23 +64,21 @@ class Page extends React.Component {
     render() {
         return (
             <div className="w-100 h-100 p-2 tutorial2">
-                        <header>
+                        <div className="logo">
                             <img className="top-logo-img" src={logo}/>
-                        </header>
+                        </div>
                         
-                        
-                        <aside className="align-middle text-center text-white">
+                        <div className="align-middle text-center text-white passos">
                             <div id="Passos" className="m-3">
                                 <Passo0/>
                             </div>
-                            
-                        </aside>
+                        </div>
 
-                        <article>
+                        <div className="btns">
                               <div id="btnAnterior" className="btn-tutorial d-none" onClick={(e) => this.Anterior(e)}><FontAwesomeIcon icon={faArrowLeft}/></div>
                               <div id="btnProximo" className="btn-tutorial" onClick={(e) => this.Proximo(e)}><FontAwesomeIcon icon={faArrowRight}/></div>
                               <div id="btnFechar" className="d-none"><BtnFechar/></div>
-                        </article>
+                        </div>
                 {/* <div className="tutorial">
                     <div
                         className="d-flex justify-content-center flex-column tutorial-content align-items-center">
