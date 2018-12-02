@@ -67,8 +67,9 @@ body {
    }
 }
 
+
 .tutorial {
-   height: 100%;
+   height: 100vh;
    max-width: 1000px;
    margin: 0 auto;
    overflow-y: hidden;
@@ -98,14 +99,23 @@ body {
 }
 
 .loja-bg {
-   width: 2394px;
+   width: 1433px;
    height: 100vh;
-   background-image: url($bgLoja);
+   /*background-image: url($bgLoja);
    background-position: left top;
    background-repeat: no-repeat;
-   background-size: 100% 100%;
+   background-size: 100% 100%;*/
    overflow: hidden;
+}
 
+.loja-bg{
+   position: relative;
+   iframe{
+      position:absolute;width:100%;height:100%;z-index:-1;
+   }
+   div{
+      height:100%;width:100%;position:absolute;z-index:1;
+   }
 }
 
 div.btn-tutorial {
@@ -154,10 +164,19 @@ div.btn-tutorial {
    }
 }
 
+#ProdutoSideBar > div{
+   z-index: 5;
+}
+
+#Produtos a{
+   z-index: 3;
+}
+
 .floating-buttons {
    width: 100vw;
    position: fixed;
    left: 0;
+   z-index: 3;
    cursor: pointer;
 
    .logo {
@@ -223,14 +242,18 @@ div.btn-tutorial {
 }
 
 #Modal {
-   z-index: 3;
+   z-index: 5;
    position: fixed;
    top: 0;
    height: 100%;
    width: 100vw;
 }
 
-#ListaDeProdutos {
+#btnProdutos .floating-buttons{
+   top: 0;
+}
+
+#ListaDefloating-buttons {
    margin: 0 auto;
    padding: 25px 100px;
    width: 100%;
@@ -314,5 +337,31 @@ div.btn-tutorial {
 
    to {
       transform: rotate(360deg);
+   }
+}
+
+
+
+
+
+
+
+
+
+
+.tutorial2{
+   header,article{
+      display: flex;
+      height: 25vh;
+      justify-content: center;
+      align-items: center;
+   }
+
+   aside{
+      display: flex;
+      height: 50vh;
+      justify-content: center;
+      align-items: center;
+
    }
 }

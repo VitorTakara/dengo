@@ -62,8 +62,25 @@ class Page extends React.Component {
 
     render() {
         return (
-            <div className="w-100 h-100 p-2">
-                <div className="tutorial">
+            <div className="w-100 h-100 p-2 tutorial2">
+                        <header>
+                            <img className="top-logo-img" src={logo}/>
+                        </header>
+                        
+                        
+                        <aside className="align-middle text-center text-white">
+                            <div id="Passos" className="m-3">
+                                <Passo0/>
+                            </div>
+                            
+                        </aside>
+
+                        <article>
+                              <div id="btnAnterior" className="btn-tutorial d-none" onClick={(e) => this.Anterior(e)}><FontAwesomeIcon icon={faArrowLeft}/></div>
+                              <div id="btnProximo" className="btn-tutorial" onClick={(e) => this.Proximo(e)}><FontAwesomeIcon icon={faArrowRight}/></div>
+                              <div id="btnFechar" className="d-none"><BtnFechar/></div>
+                        </article>
+                {/* <div className="tutorial">
                     <div
                         className="d-flex justify-content-center flex-column tutorial-content align-items-center">
                         <img className="top-logo-img" src={logo}/>
@@ -78,7 +95,7 @@ class Page extends React.Component {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
